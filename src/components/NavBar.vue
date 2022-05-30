@@ -44,6 +44,10 @@
         <img src="@/assets/header/facebook.svg" alt="">
         <p>Facebook</p>
       </a>
+      <a class="itens-sociais" target="_blank" href="#">
+        <img src="@/assets/header/whatsapp.svg" alt="">
+        <p>Whatsapp</p>
+      </a>
     </div>
   </div>
 </template>
@@ -70,14 +74,11 @@ export default {
     .itens, .itens-sociais {
       @include itens;
       &:hover {
-        transition: all .3s;
-        background: rgba(129, 128, 128, 0.61);
+        transition: ease-in-out .3s;
+        background: rgba(0, 153, 255, 0.199);
         border-radius: 13px;
       }
-      .fa-solid {
-        color: rgb(117, 117, 117);
-        cursor: pointer;
-      }
+
       p {
         opacity: 0;
         transition: all .9s;

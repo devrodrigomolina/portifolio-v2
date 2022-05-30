@@ -44,6 +44,7 @@ export default {
 }
 html {
   font-family: 'Kanit', sans-serif;
+  overflow-x: hidden;
 }
 body {
   background-image: url('assets/back.png'), radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
@@ -51,8 +52,16 @@ body {
   background-position: right;
   background-repeat: no-repeat;
 }
+
 a {
   text-decoration: none;
 }
+a.router-link-exact-active i {
+  color: rgba(2, 123, 204, 0.562);
 
+}
+.fa-solid {
+  color: rgb(207, 204, 204);
+  cursor: pointer;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar/>
-    <router-view >
+    <router-view>
       <vue-particles class="particles"
         color="#dedede"
         :particleOpacity="0.9"
@@ -41,18 +41,26 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 html {
   font-family: 'Kanit', sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body {
-  background-image: url('assets/back.png'), radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
-  background-size: 70%, 100%;
+  width: 100vw;
+  height: 100vh;  
+  background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
+  background-size: 100%;
   background-position: right;
   background-repeat: no-repeat;
 }
-
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 a {
   text-decoration: none;
 }

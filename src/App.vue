@@ -72,4 +72,11 @@ a.router-link-exact-active i {
   color: rgb(207, 204, 204);
   cursor: pointer;
 }
+// RESPONSIVO
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 30%;
+  }
+}
 </style>

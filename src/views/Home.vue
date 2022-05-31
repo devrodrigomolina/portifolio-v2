@@ -4,8 +4,8 @@
     <div class="container-infos">
       
       <div class="infos">
-        <div class="title">RODRIGO MOLINA DEVELOPER</div>
-        <div class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </div>
+        <h1 class="title">RODRIGO MOLINA DEVELOPER</h1>
+        <h2 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h2>
       </div>
 
       <div class="img-interativa">
@@ -82,7 +82,7 @@ export default {
     .img-interativa {
       width: 900px;
       position: relative;
-        z-index: 2;
+      z-index: 2;
       .img-principal {
         width: 100%;
       }

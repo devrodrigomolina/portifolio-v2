@@ -3,7 +3,7 @@
     <div class="container-infos">
       <div class="infos">
         <div class="title">RODRIGO MOLINA DEVELOPER</div>
-        <div class="subtitle">const { Curioso, Inteligente, Persistente } = EU </div>
+        <div class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </div>
       </div>
     </div>
   <slot></slot>

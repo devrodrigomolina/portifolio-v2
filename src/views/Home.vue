@@ -1,20 +1,23 @@
 <template>
   <div @mousemove="mooveTitle"  class="home" >
     <slot></slot>
-    <div class="container-infos">
-      
-      <div class="infos">
-        <h1 class="title">RODRIGO MOLINA DEVELOPER</h1>
-        <h2 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h2>
-      </div>
 
-      <div class="img-interativa">
-        <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
-        <img class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
+    <div class="container-infos">
+      <h1 class="title">RODRIGO MOLINA DEVELOPER</h1>
+      <h2 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h2>
+    </div>
+      
+   <div class="container-itens">
+      <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
+      <div class="itens">
+        <div class="icone-mensagem">
+          <img class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
+        </div>
         <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
         <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
         <img class="img-lampada" src="@/assets/ImagensPS/lampada.png" alt="">
         <img class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
+        <img class="img-setamouse" src="@/assets/ImagensPS/seta-mouse.png" alt="">
       </div>
     </div>
 
@@ -46,62 +49,70 @@ export default {
 <style scoped lang="scss">
 @import '../assets/_mixins.scss';
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
 .home {
   width: 100vw;
   height: 100vh;
   display: flex;
-  .container-infos {
+  justify-content: space-evenly;
+  align-items: center;
+  .container-infos { // TEXTOS 
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 200px;
-    .infos {
-      width: 800px;
-      .title{
-        font-weight: 800;
-        color: transparent;
-        font-size: 8rem;
-        background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
-        background-position: 40% 50%;
-        -webkit-background-clip: text;
-        position: relative; 
-        text-align:center;
-        line-height:90px;
-        letter-spacing: -5px;
-        cursor: default;
-      }
-      .subtitle{
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        padding-top:10px;
-        color: rgb(160, 160, 160);
-      }
+    max-width: 600px;
+    z-index: 2;
+    margin-left: 220px;
+    margin-right: 70px;
+    .title{
+      font-weight: 800;
+      color: transparent;
+      font-size: 6vw;
+      background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+      background-position: 40% 50%;
+      -webkit-background-clip: text;
+      position: relative; 
+      text-align:center;
+      line-height:90px;
+      letter-spacing: -5px;
+      cursor: default;
     }
-    .img-interativa {
-      width: 900px;
-      position: relative;
-      z-index: 2;
-      .img-principal {
-        width: 100%;
-      }
+    .subtitle{
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-top:10px;
+      color: rgb(160, 160, 160);
+    }
+  }
+
+  .container-itens { // IMAGEM INTERATIVA
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;  
+    .img-principal {
+      width: 800px;
+      height: 600px;
+    }
+    .itens {
       .img-mensagem {
-        width: 105px;
+        width: 12%;
         position: absolute;
-        top: 18px;
-        left: 510px;
+        top:15px;
+        right: 255px;
         transition: all .3s;
         cursor: pointer;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.2);
         }
       }
+      
       .img-projetos {
-        width: 105px;
+        width: 11%;
         position: absolute;
-        top:400px;
-        left: 200px;
+        top:363px;
+        left: 181px;
         transition: all .3s;
         cursor: pointer;
         &:hover {
@@ -109,36 +120,107 @@ export default {
         }
       }
       .img-lupa {
-        width: 110px;
+        width: 12.5%;
         position: absolute;
-        top:240px;
-        left: 268px;
+        top:214px;
+        left: 237px;
         transition: all .3s;
         cursor: pointer;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.2);
         }
       }
       .img-lampada {
-        width: 110px;
+        width: 10%;
         position: absolute;
         top:110px;
-        right: 110px;
+        right: 130px;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .img-videos {
+        width: 10%;
+        position: absolute;
+        top: 247px;
+        left: 5px;
         transition: all .3s;
         cursor: pointer;
         &:hover {
           transform: scale(1.1);
         }
       }
-      .img-videos {
-        width: 90px;
+      .img-setamouse {
+        width: 10%;
         position: absolute;
-        top:270px;
-        left: 6px;
+        top: 190px;
+        right: 35px;
         transition: all .3s;
         cursor: pointer;
         &:hover {
           transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+// RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO
+
+
+@media screen and (max-width: 1567px) {
+ .home { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home { 
+    .container-infos { // TEXTOS 
+      width: 280px;
+      margin-left: 40px;
+      margin-right: 0;
+      .title{
+        font-size: 50px;
+        line-height:70%;
+        letter-spacing: -3px;
+      }
+      .subtitle{
+        font-size: 8px;
+      }
+    }
+    .container-itens {
+      margin-left: 60px;
+      .img-principal {
+        width: 330px;
+        height: 250px;
+        border: 1px solid red;
+      }
+      .itens {
+        .img-mensagem {
+          top: 3px;
+          right: 190px;
+        }
+        .img-projetos {
+          top: 274px;
+          left: 135px;
+        }
+        .img-lupa {
+          top:162px;
+          left: 176px;
+        }
+        .img-lampada {
+          top: 70px;
+          right: 100px;
+        }
+        .img-videos {
+          top: 189px;
+        }
+        .img-setamouse {
+          top: 130px;
         }
       }
     }

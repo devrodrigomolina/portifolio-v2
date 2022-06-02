@@ -41,26 +41,32 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
 html {
+  height: 100vh;
   font-family: 'Kanit', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   width: 100vw;
   height: 100vh;  
   background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
   background-size: 100%;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
+}
+canvas {
+  display: block;
 }
 #particles-js {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
   z-index: 1;
 }
+
 a {
   text-decoration: none;
 }
@@ -74,9 +80,5 @@ a.router-link-exact-active i {
 }
 // RESPONSIVO
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 30%;
-  }
-}
+
 </style>

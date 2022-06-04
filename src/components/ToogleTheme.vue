@@ -3,7 +3,7 @@
     <input class="checkbox" type="checkbox" @click="changePageTheme(checked)" v-model="checked" id="chk">
     <label for="chk">
       <img v-if="checked" class="img-lampada" src="@/assets/ImagensPS/lampada.png" alt="">
-      <img v-else class="img-lampada" src="@/assets/ImagensPS/lampadaDesligada2.png" alt="">
+      <img v-else class="img-lampada-desligada" src="@/assets/ImagensPS/lampadaDesligada.png" alt="">
     </label>
   </div>
 </template>
@@ -40,6 +40,17 @@ export default {
     position: absolute;
     top:110px;
     right: 130px;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .img-lampada-desligada {
+    width: 6.5%;
+    position: absolute;
+    top:120px;
+    right: 140px;
     transition: all .3s;
     cursor: pointer;
     &:hover {

@@ -87,7 +87,6 @@ export default {
           transform: scale(1.2);
         }
       }
-      
       .img-projetos {
         width: 11%;
         position: absolute;

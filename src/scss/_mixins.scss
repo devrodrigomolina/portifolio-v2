@@ -1,0 +1,24 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+@mixin transition-opacity1 {
+  transition: all .5s;
+  transition-delay: 350ms;
+  opacity: 1;
+}
+

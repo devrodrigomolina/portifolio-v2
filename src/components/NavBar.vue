@@ -1,5 +1,5 @@
 <template>
-  <div class="container-navbar">
+  <div class="container-navbar" :class="clearMode">
     <div class="navbar-itens fa-lg">
       <router-link  class="itens" to="/">
         <i class="fa-solid fa-house-user"></i>
@@ -54,15 +54,28 @@
 
 <script>
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  computed: {
+    clearMode() {
+      return this.$store.state.themeCurrent ? 'nav-clearmode' : 'nav-darkmode'
+    }
+  },
 }
 </script>
 
 <style scoped lang="scss">
-@import '../assets/_mixins.scss';
+@import '../scss/_mixins.scss';
 
 .container-navbar {
-  @include container-navbar;
+  @include column-between;
+  width: 50px;
+  height: 100vh;
+  border-right: 1px solid rgb(124, 124, 124);
+  background-size: 20px 20px;
+  position: absolute;
+  z-index: 999;
+  border-radius: 0px 15px 15px 0px;
+  @include transition-opacity1;
   &:hover {
     width: 250px;
     &:hover .itens p,  &:hover .itens-sociais p {
@@ -70,15 +83,19 @@ export default {
     }
   }
   .navbar-itens, .sociais-itens {
-    @include itens-header-container;
+    @include flex-column;
+    width: 100%;
+    border-radius: 0px 15px 15px 0px;
     .itens, .itens-sociais {
-      @include itens;
+      @include flex-center;
+      padding: 10px;
+      margin-top: 20px;
+      cursor: pointer;
       &:hover {
         transition: ease-in-out .3s;
-        background: rgba(0, 153, 255, 0.199);
+        background: rgba(239, 240, 240, 0.342);
         border-radius: 13px;
       }
-
       p {
         opacity: 0;
         transition: all .9s;
@@ -93,5 +110,12 @@ export default {
     }
   }
 } 
+// TROCA DE TEMAS
 
+.nav-clearmode {
+  background: transparent;
+}
+.nav-darkmode {
+  background: rgba(0, 0, 0, 0.781);
+}
 </style>

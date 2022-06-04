@@ -1,25 +1,27 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <NavBar/>
-    <router-view>
-      <vue-particles class="particles"
-        color="#dedede"
-        :particleOpacity="0.9"
-        :particlesNumber="40"
-        shapeType="star"
-        :particleSize="2"
-        linesColor="#dedede"
-        :lineLinked="false"
-        :lineOpacity="0.9"
-        :linesDistance="150"
-        :moveSpeed="1"
-        :hoverEffect="false"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
-    </router-view>
+    <transition mode="out-in">
+      <router-view :class="themeCurrent">
+        <vue-particles class="particles"
+          color="#dedede"
+          :particleOpacity="1"
+          :particlesNumber="30"
+          shapeType="star"
+          :particleSize="2"
+          linesColor="#dedede"
+          :lineLinked="false"
+          :lineOpacity="0.9"
+          :linesDistance="150"
+          :moveSpeed="1"
+          :hoverEffect="false"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push"
+        >
+        </vue-particles>
+      </router-view>
+    </transition>
   </div>
 </template>
 
@@ -27,9 +29,19 @@
 import NavBar from '@/components/NavBar.vue'
 
 export default {
+  data() {
+    return {
+     
+    }
+  },
   components: {
     NavBar
-  }
+  },
+  computed: {
+    themeCurrent() {
+      return this.$store.state.themeCurrent ? 'dark' : 'clear'
+    }
+  },
 }
 </script>
 
@@ -42,16 +54,26 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
-  height: 100vh;
   font-family: 'Kanit', sans-serif;
   overflow-x: hidden;
 }
-body {
+
+.dark {
   width: 100vw;
   height: 100vh;  
   background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 3s;
+}
+
+.clear {
+  width: 100vw;
+  height: 100vh;  
+  background: rgb(255,255,255);
+  background: linear-gradient(239deg, rgb(224, 243, 255) 4%, rgb(189, 226, 252) 29%, rgb(222, 242, 255) 65%);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,20 +85,30 @@ canvas {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  border: 1px solid red;
   z-index: 1;
 }
-
 a {
   text-decoration: none;
 }
 a.router-link-exact-active i {
   color: rgba(2, 123, 204, 0.562);
-
 }
 .fa-solid {
   color: rgb(207, 204, 204);
   cursor: pointer;
+}
+
+// ANIMAÇÕES
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all .7s
+}
+.v-enter-to,
+.v-leave {
+  opacity: 1;
 }
 // RESPONSIVO
 

@@ -1,23 +1,24 @@
 <template>
-  <div @mousemove="mooveTitle"  class="home" >
+  <div @mousemove="mooveTitle" class="home" >
     <slot></slot>
-
-    <div class="container-infos">
-      <h1 class="title">RODRIGO MOLINA DEVELOPER</h1>
-      <h2 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h2>
-    </div>
-      
-   <div class="container-itens">
+    <TitleAnimated />  
+    <div class="container-itens">
       <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
       <div class="itens">
-        <div class="icone-mensagem">
+        <router-link to="/contact">   
           <img class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
-        </div>
-        <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
-        <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
-        <img class="img-lampada" src="@/assets/ImagensPS/lampada.png" alt="">
-        <img class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
-        <img class="img-setamouse" src="@/assets/ImagensPS/seta-mouse.png" alt="">
+        </router-link>
+        <router-link to="/search">
+          <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
+        </router-link>
+        <router-link to="/projects"> 
+          <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
+        </router-link>
+        <router-link to="/videos"> 
+          <img class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
+        </router-link>
+        <ToogleTheme />
+        <ArrowEfectsMouse/>
       </div>
     </div>
 
@@ -25,11 +26,18 @@
 </template>
 
 <script>
-
+import ToogleTheme from '@/components/ToogleTheme.vue'
+import ArrowEfectsMouse from '@/components/ArrowEfectsMouse.vue'
+import TitleAnimated from '@/components/TitleAnimated.vue'
 
 export default {
   name: 'Home',
   el: '#home',
+  components: { 
+    ToogleTheme,
+    ArrowEfectsMouse,
+    TitleAnimated
+  },
   methods: {
     mooveTitle(event) {
       let mouseX = event.pageX;
@@ -37,17 +45,18 @@ export default {
       let traX = ((4 * mouseX) / 570) + 40;
       let traY = ((4 * mouseY) / 570) + 50;
       let titleMoving = this.$el.querySelector(".title")
+      titleMoving.style.transitionDuration = '150ms'
       titleMoving.style.backgroundPosition = traX + "%" + traY + "%"
     }
   },
-  mounted() {
+  created() {
     this.mooveTitle
   }
 }
 </script>
 
 <style scoped lang="scss">
-@import '../assets/_mixins.scss';
+@import '../scss/_mixins.scss';
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 
 .home {
@@ -56,35 +65,6 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  .container-infos { // TEXTOS 
-    width: 100%;
-    max-width: 600px;
-    z-index: 2;
-    margin-left: 220px;
-    margin-right: 70px;
-    .title{
-      font-weight: 800;
-      color: transparent;
-      font-size: 6vw;
-      background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
-      background-position: 40% 50%;
-      -webkit-background-clip: text;
-      position: relative; 
-      text-align:center;
-      line-height:90px;
-      letter-spacing: -5px;
-      cursor: default;
-    }
-    .subtitle{
-      display: block;
-      text-align: center;
-      font-size: 20px;
-      text-transform: uppercase;
-      padding-top:10px;
-      color: rgb(160, 160, 160);
-    }
-  }
-
   .container-itens { // IMAGEM INTERATIVA
     display: flex;
     align-items: center;
@@ -130,17 +110,7 @@ export default {
           transform: scale(1.2);
         }
       }
-      .img-lampada {
-        width: 10%;
-        position: absolute;
-        top:110px;
-        right: 130px;
-        transition: all .3s;
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
+
       .img-videos {
         width: 10%;
         position: absolute;
@@ -152,17 +122,7 @@ export default {
           transform: scale(1.1);
         }
       }
-      .img-setamouse {
-        width: 10%;
-        position: absolute;
-        top: 190px;
-        right: 35px;
-        transition: all .3s;
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+     
     }
   }
 }
@@ -197,7 +157,6 @@ export default {
       .img-principal {
         width: 330px;
         height: 250px;
-        border: 1px solid red;
       }
       .itens {
         .img-mensagem {

@@ -57,6 +57,7 @@ export default {
 html {
   font-family: 'Kanit', sans-serif;
   overflow-x: hidden;
+   transition: all 3s;
 }
 
 .dark {
@@ -66,17 +67,19 @@ html {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 3s;
 }
 
 .clear {
   width: 100vw;
   height: 100vh;  
   background: rgb(255,255,255);
-  background: linear-gradient(239deg, rgb(224, 243, 255) 4%, rgb(189, 226, 252) 29%, rgb(222, 242, 255) 65%);
+  background: linear-gradient(239deg, rgb(224, 243, 255) 4%, rgb(166, 210, 241) 29%, rgb(222, 242, 255) 65%);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+#app {
+  transition: all 3s;
 }
 canvas {
   display: block;
@@ -104,7 +107,7 @@ a.router-link-exact-active i {
 }
 .v-enter-active,
 .v-leave-active {
-  transition: all .7s
+  transition: all .3s
 }
 .v-enter-to,
 .v-leave {

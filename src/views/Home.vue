@@ -2,12 +2,12 @@
   <div @mousemove="mooveTitle" class="home" >
     <slot></slot>
     <TitleAnimated />  
+    <Modal :modal="modalOpen"/>
     <div class="container-itens">
       <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
+   
       <div class="itens">
-        <router-link to="/contact">   
-          <img class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
-        </router-link>
+        <img @click="modalOpen = !modalOpen" class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
         <router-link to="/search">
           <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
         </router-link>
@@ -20,6 +20,7 @@
         <ToogleTheme />
         <ArrowEfectsMouse/>
       </div>
+     
     </div>
 
   </div>
@@ -29,14 +30,22 @@
 import ToogleTheme from '@/components/ToogleTheme.vue'
 import ArrowEfectsMouse from '@/components/ArrowEfectsMouse.vue'
 import TitleAnimated from '@/components/TitleAnimated.vue'
+import Modal from '@/components/Modal.vue'
 
 export default {
   name: 'Home',
   el: '#home',
+  data() {
+    return {
+      modalOpen: false
+    }
+  },
+  props: ["modal"],
   components: { 
     ToogleTheme,
     ArrowEfectsMouse,
-    TitleAnimated
+    TitleAnimated,
+    Modal
   },
   methods: {
     mooveTitle(event) {
@@ -47,7 +56,7 @@ export default {
       let titleMoving = this.$el.querySelector(".title")
       titleMoving.style.transitionDuration = '150ms'
       titleMoving.style.backgroundPosition = traX + "%" + traY + "%"
-    }
+    },
   },
   created() {
     this.mooveTitle
@@ -123,6 +132,7 @@ export default {
       }
      
     }
+
   }
 }
 
@@ -159,26 +169,20 @@ export default {
       }
       .itens {
         .img-mensagem {
-          top: 3px;
-          right: 190px;
+          top: 5px;
+          right: 104px;
         }
         .img-projetos {
-          top: 274px;
-          left: 135px;
+          top: 152px;
+          left: 75px;
         }
         .img-lupa {
-          top:162px;
-          left: 176px;
-        }
-        .img-lampada {
-          top: 70px;
-          right: 100px;
+          top: 90px;
+          left: 97px;
         }
         .img-videos {
-          top: 189px;
-        }
-        .img-setamouse {
-          top: 130px;
+          top: 104px;
+          left: 3px;
         }
       }
     }

@@ -40,4 +40,17 @@ export default {
     color: rgb(160, 160, 160);
   }
 }
+
+@media screen and (max-width: 768px) { 
+.container-infos { 
+  .title{
+    font-size: 9vw;
+    line-height:30px;
+    letter-spacing: -1px;
+  }
+  .subtitle{
+    font-size: 9px;
+  }
+}
+}
 </style>

@@ -38,8 +38,8 @@ export default {
   .img-lampada {
     width: 10%;
     position: absolute;
-    top:110px;
-    right: 130px;
+    top: 40px;
+    right: 40px;
     transition: all .3s;
     cursor: pointer;
     &:hover {
@@ -49,8 +49,8 @@ export default {
   .img-lampada-desligada {
     width: 6.5%;
     position: absolute;
-    top:120px;
-    right: 140px;
+    top: 40px;
+    right: 40px;
     transition: all .3s;
     cursor: pointer;
     &:hover {

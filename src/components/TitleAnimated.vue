@@ -7,7 +7,8 @@
 
 <script>
 export default {
-  name: 'TitleAnimated'
+  name: 'TitleAnimated',
+
 }
 </script>
 
@@ -22,7 +23,7 @@ export default {
     font-weight: 800;
     color: transparent;
     font-size: 6vw;
-    background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+    background: url("../assets/rainbow-nebula.jpg") repeat;
     background-position: 40% 50%;
     -webkit-background-clip: text;
     position: relative; 

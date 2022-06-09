@@ -1,36 +1,37 @@
 <template>
-  <div class="modal" @click="closeModal" v-if="modal">
-    <button @click="modal = false">X</button>
-    <div class="mensagem">
-      <h2>Se quiser mandar uma mensagem diretamente daqui, basta enviar abaixo:</h2>
-      <div class="inputs">
-        <input type="text" placeholder="Nome" id="name">
-        <input type="email" placeholder="Email" name="" id="email">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <Button/>
-      </div>
-      <h2>Ou se preferir, entre em contato direto:</h2>
-      <div class="contatos-sociais">
-        <a class="itens-sociais" target="_blank" href="https://www.linkedin.com/in/devrodrigomolina/">
-          <img src="@/assets/header/linkedin-48.svg" alt="">
-          <p>Linkedin</p>
-        </a>
-        <a class="itens-sociais" target="_blank" href="https://github.com/FOXXX2K">
-          <img src="@/assets/header/github.svg" alt="">
-          <p>Github</p>
-        </a>
-        <a class="itens-sociais" target="_blank" href="#">
-          <img src="@/assets/header/facebook.svg" alt="">
-          <p>Facebook</p>
-        </a>
-        <a class="itens-sociais" target="_blank" href="#">
-          <img src="@/assets/header/whatsapp.svg" alt="">
-          <p>Whatsapp</p>
-        </a>
+  <transition mode="out-in">
+    <div class="modal" v-if="modal">
+      <button @click="openModal">X</button>
+      <div class="mensagem">
+        <h2>Se quiser mandar uma mensagem diretamente daqui, basta enviar abaixo:</h2>
+        <div class="inputs">
+          <input type="text" placeholder="Nome" id="name">
+          <input type="email" placeholder="Email" name="" id="email">
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <Button/>
+        </div>
+        <h2>Ou se preferir, entre em contato direto:</h2>
+        <div class="contatos-sociais">
+          <a class="itens-sociais" target="_blank" href="https://www.linkedin.com/in/devrodrigomolina/">
+            <img src="@/assets/header/linkedin-48.svg" alt="">
+            <p>Linkedin</p>
+          </a>
+          <a class="itens-sociais" target="_blank" href="https://github.com/FOXXX2K">
+            <img src="@/assets/header/github.svg" alt="">
+            <p>Github</p>
+          </a>
+          <a class="itens-sociais" target="_blank" href="#">
+            <img src="@/assets/header/facebook.svg" alt="">
+            <p>Facebook</p>
+          </a>
+          <a class="itens-sociais" target="_blank" href="#">
+            <img src="@/assets/header/whatsapp.svg" alt="">
+            <p>Whatsapp</p>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-
+  </transition>
 </template>
 
 <script>
@@ -38,14 +39,12 @@ import Button from "@/components/Button.vue"
 
 export default {
   name: 'Modal',
-  props: ["modal"],
   components: {Button},
+  props: ['modal'],
   methods: {
-    closeModal(event) {
-      console.log(event)
-
-    }
-
+    openModal() {
+      this.$emit('update:openModal')
+    },
   }
 }
 </script>
@@ -128,4 +127,17 @@ export default {
   }
 }
 
+.v-enter, .v-leave-to {
+  top: -130px;
+  opacity: 0;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all .7s
+}
+.v-enter-to,
+.v-leave {
+  opacity: 1;
+  top: 65px;
+}
 </style>

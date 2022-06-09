@@ -29,11 +29,6 @@
 import NavBar from '@/components/NavBar.vue'
 
 export default {
-  data() {
-    return {
-     
-    }
-  },
   components: {
     NavBar
   },
@@ -57,7 +52,7 @@ export default {
 html {
   font-family: 'Kanit', sans-serif;
   overflow-x: hidden;
-   transition: all 3s;
+  transition: all 3s;
 }
 
 .dark {
@@ -103,15 +98,17 @@ a.router-link-exact-active i {
 
 // ANIMAÇÕES
 .v-enter, .v-leave-to {
+  top: -130px;
   opacity: 0;
 }
 .v-enter-active,
 .v-leave-active {
-  transition: all .3s
+  transition: all .7s
 }
 .v-enter-to,
 .v-leave {
   opacity: 1;
+  top: 65px;
 }
 // RESPONSIVO
 

@@ -2,10 +2,9 @@
   <div @mousemove="mooveTitle" class="home" >
     <slot></slot>
     <TitleAnimated />  
-    <Modal :modal="modalOpen"/>
+    <Modal :modal="modalOpen" @update:openModal="modalOpen = false"/>
     <div class="container-itens">
       <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
-   
       <div class="itens">
         <img @click="modalOpen = !modalOpen" class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
         <router-link to="/search">
@@ -20,10 +19,7 @@
         <ToogleTheme />
         <ArrowEfectsMouse/>
       </div>
-        
-     
     </div>
-
   </div>
 </template>
 
@@ -41,7 +37,6 @@ export default {
       modalOpen: false
     }
   },
-  props: ["modal"],
   components: { 
     ToogleTheme,
     ArrowEfectsMouse,
@@ -58,6 +53,7 @@ export default {
       titleMoving.style.transitionDuration = '150ms'
       titleMoving.style.backgroundPosition = traX + "%" + traY + "%"
     },
+
   },
   created() {
     this.mooveTitle

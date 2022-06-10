@@ -22,16 +22,33 @@ export default {
   button {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56, 2, 155, 0.637));
+    background-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128) , rgba(56, 2, 155, 0.637)50%);
+    background-size: 300%;
+    background-position: left;
     border-radius: 8px;
     border: none;
     margin: 0 auto;
-     font-weight: 800;
+    font-weight: 800;
     color: white;
+    transition: background-position .3s;
+    animation-duration: 1s;
     &:hover {
+      animation-name: bounce;
+      transition: all 3s;
       cursor: pointer;
-      background-image: linear-gradient(0.25turn, rgb(177, 171, 17), rgb(192, 0, 96), rgba(41, 3, 112, 0.781));
+      animation-timing-function: ease;
+      background-position: right;
     }
   }
+}
+
+// ANIMACOES 
+// BOTAO
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  50%  { transform:  translateY(0); }
+  100% { transform:  translateY(0); }
 }
 </style>

@@ -62,7 +62,7 @@ export default {
   margin: 0 auto;
   z-index: 10;
   .cards {
-   
+    margin-left: 30px;
     .itens {
       display: flex;
       align-items: center;

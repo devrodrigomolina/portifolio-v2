@@ -12,7 +12,7 @@ export default {
 <style lang="scss" scoped>
 .clouds {
   width: 100vw;
-  height:320vh;
+  height:100vh;
   position: absolute;
   z-index: 1;
   background-color:#BFDFEC;
@@ -24,6 +24,7 @@ export default {
 @media screen and (max-width: 1567px) {
 .clouds {
   width: 100vw;
+  height: 320vh;
   position: absolute;
   z-index: 1;
   background-color:#BFDFEC;

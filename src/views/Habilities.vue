@@ -5,7 +5,7 @@
       <h1>Minhas Habilidades</h1>
     </div>
       <div class="stacks">
-        <transition :appear="true">
+        <transition name="habilities" :appear="true">
           <CardsHabilities/>
         </transition>
       </div>
@@ -17,7 +17,6 @@ import CardsHabilities from '@/components/CardsHabilities.vue'
 
 export default {
   components: {CardsHabilities},
-
 }
 </script>
 
@@ -31,7 +30,7 @@ export default {
     z-index: 10;
     h1 { 
       font-family: 'Poppins';
-      background: linear-gradient(to right, #ffffff 0, rgb(13, 126, 218) 10%, #ffffff 20%);
+      background: linear-gradient(to right, #c7c3c3 0, rgb(255, 255, 255) 10%, #c7c3c3 20%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: shine 3s infinite linear;
@@ -68,16 +67,16 @@ export default {
 }
 
 // ANIMAÇÕES
-.v-enter, .v-leave-to {
+.habilities-enter, .habilities-leave-to {
   opacity: 0;
   transform: translateY(-150px);
 }
-.v-enter-active,
-.v-leave-active {
+.habilities-enter-active,
+.habilities-leave-active {
   transition: all 1s
 }
-.v-enter-to,
-.v-leave {
+.habilities-enter-to,
+.habilities-leave {
   opacity: 1;
   transform: translateY(0px);
 }

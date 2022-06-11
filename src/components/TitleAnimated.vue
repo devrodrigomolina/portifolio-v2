@@ -1,7 +1,7 @@
 <template>
   <div class="container-infos">
-    <h1 class="title">RODRIGO MOLINA DEVELOPER</h1>
-    <h2 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h2>
+    <h2 class="title">RODRIGO MOLINA DEVELOPER</h2>
+    <h3 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h3>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
     font-size: 20px;
     text-transform: uppercase;
     padding-top:10px;
-    color: rgb(160, 160, 160);
+    color: rgb(65, 65, 65);
   }
 }
 

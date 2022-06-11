@@ -57,6 +57,9 @@ html {
   overflow-x: hidden;
   background:  rgb(4, 6, 10);
 }
+h1 {
+  
+}
 .dark {
   width: 100vw;
   height: 100vh;  

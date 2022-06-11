@@ -16,11 +16,22 @@ export default {
       checked: ''
     }
   },
+  watch: {
+    checked() {
+      localStorage.setItem('theme',this.checked)
+      const getTheme = localStorage.getItem('theme');
+      const objTheme = JSON.parse(getTheme)
+      console.log(typeof objTheme)
+      this.checked = objTheme
+    }
+  },
   methods: {
     changePageTheme(checked) {
       this.$store.dispatch("changeTheme", checked)
-    }
-  }
+    },
+
+  },
+
 }
 </script>
 

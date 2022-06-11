@@ -2,7 +2,7 @@
   <div @mousemove="mooveTitle" class="home" >
     <slot></slot>
     <TitleAnimated />  
-    <Modal :modal="modalOpen" @update:openModal="modalOpen = false"/>
+    <ModalMessage :modal="modalOpen" @update:openModal="modalOpen = false"/>
     <div class="container-itens">
       <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
       <div class="itens">
@@ -13,9 +13,9 @@
         <router-link to="/projects"> 
           <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
         </router-link>
-        <router-link to="/videos"> 
-          <img class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
-        </router-link>
+
+        <img @click="modalOpen = !modalOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
+
         <ToogleTheme />
         <ArrowEfectsMouse/>
       </div>
@@ -27,7 +27,7 @@
 import ToogleTheme from '@/components/ToogleTheme.vue'
 import ArrowEfectsMouse from '@/components/ArrowEfectsMouse.vue'
 import TitleAnimated from '@/components/TitleAnimated.vue'
-import Modal from '@/components/Modal.vue'
+import ModalMessage from '@/components/ModalMessage.vue'
 
 export default {
   name: 'Home',
@@ -41,7 +41,7 @@ export default {
     ToogleTheme,
     ArrowEfectsMouse,
     TitleAnimated,
-    Modal
+    ModalMessage
   },
   methods: {
     mooveTitle(event) {

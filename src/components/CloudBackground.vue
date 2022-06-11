@@ -19,7 +19,6 @@ export default {
   background-repeat:repeat-x;
   background-image:url("https://i.stack.imgur.com/b7z29.png");
   animation: movement 10s linear infinite;
-  transition: all 3s;
 }
 
 

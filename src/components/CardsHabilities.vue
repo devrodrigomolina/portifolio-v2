@@ -62,7 +62,7 @@ export default {
   margin: 0 auto;
   z-index: 10;
   .cards {
-    margin-left: 25px;
+   
     .itens {
       display: flex;
       align-items: center;
@@ -98,7 +98,6 @@ export default {
         color: white;
       }
     }
-
   }
 }
 
@@ -106,7 +105,11 @@ export default {
   .container-cards {
     width: 100vw;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    .cards {
+      margin-bottom: 30px;
+    }
   }
 }
 </style>

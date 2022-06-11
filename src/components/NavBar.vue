@@ -118,4 +118,14 @@ export default {
 .nav-darkmode {
   background: rgba(0, 0, 0, 0.781);
 }
+
+// RESPONSIVIDADE
+
+@media screen and (max-width: 1567px) {
+
+.container-navbar {
+ // display: none;
+}
+}
+
 </style>

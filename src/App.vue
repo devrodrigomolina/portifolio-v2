@@ -57,15 +57,12 @@ html {
   overflow-x: hidden;
   background:  rgb(4, 6, 10);
 }
-
 .dark {
   width: 100vw;
   height: 100vh;  
   //background:  rgb(4, 6, 10);
   background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
 }
-
-
 canvas {
   display: block;
 }
@@ -101,6 +98,5 @@ a.router-link-exact-active i {
   opacity: 1;
 }
 // RESPONSIVO
-
 
 </style>

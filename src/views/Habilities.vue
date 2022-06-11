@@ -1,6 +1,6 @@
 <template>
   <div class="habilidades">
-    <slot> </slot>
+    <slot></slot>
     <div class="infos">
       <h1>Minhas Habilidades</h1>
     </div>
@@ -44,7 +44,30 @@ export default {
 
 }
 
+// RESPONSIVIDADE
 
+@media screen and (max-width: 1567px) {
+.habilidades {
+  .infos {
+    position: relative;
+    z-index: 10;
+    h1 { 
+      font-family: 'Poppins';
+      background: linear-gradient(to right, #ffffff 0, rgb(13, 126, 218) 10%, #ffffff 20%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s infinite linear;
+      animation-fill-mode: forwards;
+      font-weight: 600;
+      font-size: 2rem;
+      text-align: center;
+      padding: 80px 0;
+    }
+  }
+}
+}
+
+// ANIMAÇÕES
 .v-enter, .v-leave-to {
   opacity: 0;
   transform: translateY(-150px);

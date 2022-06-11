@@ -4,11 +4,11 @@
     <div class="infos">
       <h1>Minhas Habilidades</h1>
     </div>
-    <transition appear="true">
       <div class="stacks">
-        <CardsHabilities/>
+        <transition :appear="true">
+          <CardsHabilities/>
+        </transition>
       </div>
-    </transition>
   </div>
 </template>
 
@@ -16,7 +16,8 @@
 import CardsHabilities from '@/components/CardsHabilities.vue'
 
 export default {
-  components: {CardsHabilities}
+  components: {CardsHabilities},
+
 }
 </script>
 
@@ -38,11 +39,11 @@ export default {
       font-weight: 600;
       font-size: 3rem ;
       padding:110px 180px;
-
     }
   }
 
 }
+
 
 .v-enter, .v-leave-to {
   opacity: 0;

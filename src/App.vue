@@ -1,9 +1,9 @@
 <template>
   <div id="app" >
     <NavBar />
-      <transition mode="out-in"> <!-- PARA FUNCIONAR A TRANSIÇÃO DE FUNDO, POR O TRANSITION DENTRO DO ROUTERVIEW-->
+      <transition mode="out-in"> 
         <router-view :class="themeCurrent">
-          <vue-particles v-if="this.$store.state.themeCurrent" class="particles"
+          <vue-particles v-if="themeCurrent" class="particles"
             :particlesNumber="26"
             shapeType="star"
             :particleSize="2.3"
@@ -33,10 +33,14 @@ export default {
   },
   computed: {
     themeCurrent() {
-      return this.$store.state.themeCurrent ? 'dark' : 'clear'
+      return this.$store.state.themeCurrent ? 'dark' : ''
     }
-  },
-}
+  },  
+  created() {
+    const chec = localStorage.getItem('theme')
+    const chec2 = JSON.parse(chec)
+    this.$store.state.themeCurrent = chec2
+  }}
 </script>
 
 

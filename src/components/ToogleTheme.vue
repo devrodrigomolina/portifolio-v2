@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <input class="checkbox" type="checkbox" @click="changePageTheme(checked)" v-model="checked" id="chk">
-    <label for="chk">
-      <img v-if="checked" class="img-lampada" src="@/assets/ImagensPS/lampada.png" alt="">
+    <input class="checkbox" type="checkbox"  v-model="checked" id="chk">
+    <label for="chk" @click="saveChecked">
+      <img v-if="!checked" class="img-lampada" src="@/assets/ImagensPS/lampada.png" alt="">
       <img v-else class="img-lampada-desligada" src="@/assets/ImagensPS/lampadaDesligada.png" alt="">
     </label>
   </div>
@@ -13,25 +13,26 @@ export default {
   name: 'ToogleTheme',
   data() {
     return {
-      checked: ''
+      checked: false
     }
+  },
+
+  methods: {
+    saveChecked() {
+      localStorage.setItem('theme', !this.checked)
+    },
+  },
+
+  created() {
+    const chec = localStorage.getItem('theme')
+    const chec2 = JSON.parse(chec)
+    this.checked = chec2
   },
   watch: {
     checked() {
-      localStorage.setItem('theme',this.checked)
-      const getTheme = localStorage.getItem('theme');
-      const objTheme = JSON.parse(getTheme)
-      console.log(typeof objTheme)
-      this.checked = objTheme
+      this.$store.dispatch("changeTheme", this.checked)
     }
   },
-  methods: {
-    changePageTheme(checked) {
-      this.$store.dispatch("changeTheme", checked)
-    },
-
-  },
-
 }
 </script>
 

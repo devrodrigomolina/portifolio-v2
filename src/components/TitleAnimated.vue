@@ -1,6 +1,7 @@
 <template>
   <div class="container-infos">
     <h2 class="title">RODRIGO MOLINA DEVELOPER</h2>
+    <p>Desenvolvimento de sites responsivos usando HTML, CSS, SASS, JS, VUE.JS.</p>
     <h3 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h3>
   </div>
 </template>
@@ -8,7 +9,6 @@
 <script>
 export default {
   name: 'TitleAnimated',
-
 }
 </script>
 
@@ -37,8 +37,16 @@ export default {
     text-align: center;
     font-size: 20px;
     text-transform: uppercase;
-    padding-top:10px;
-    color: rgb(65, 65, 65);
+    padding-top:15px;
+    color: #DDDDDC;
+  }
+  p {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    color: #DDDDDC;
   }
 }
 

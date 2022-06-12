@@ -3,6 +3,7 @@
     <NavBar />
       <transition mode="out-in"> 
         <router-view :class="themeCurrent">
+
           <vue-particles v-if="themeCurrent" class="particles"
             :particlesNumber="26"
             shapeType="star"
@@ -57,9 +58,7 @@ html {
   overflow-x: hidden;
   background:  rgb(4, 6, 10);
 }
-h1 {
-  
-}
+
 .dark {
   width: 100vw;
   height: 100vh;  

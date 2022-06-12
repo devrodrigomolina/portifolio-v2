@@ -1,5 +1,6 @@
 <template>
   <div class="projetos">
+    <slot />
     <p>PROOFAJFIPJKASIPFJAPIFJKAP</p>
   </div>
 </template>

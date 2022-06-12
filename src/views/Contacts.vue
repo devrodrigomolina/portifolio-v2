@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="container-contacts">
+    <slot/>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div class="habilidades">
-    <slot></slot>
+    <slot />
     <div class="infos">
       <h1>Minhas Habilidades</h1>
     </div>
@@ -40,7 +40,6 @@ export default {
       padding:110px 180px;
     }
   }
-
 }
 
 // RESPONSIVIDADE

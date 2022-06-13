@@ -80,7 +80,7 @@ export default {
           position: absolute;
           left: 16px;
           width: 4px;
-          height: 100%;
+          animation: ulbar 5.5s linear both;
           z-index: 400;
           border-radius: 1rem;
         } 
@@ -88,6 +88,18 @@ export default {
           width: 700px;
           text-align: justify;
           margin-bottom: 50px;
+          &:nth-child(1) {
+          animation: liItens .3s 1s linear both;
+          }
+          &:nth-child(2) {
+          animation: liItens .4s 2s linear  both;
+          }
+          &:nth-child(3) {
+          animation: liItens .5s 3s linear  both;
+          }
+          &:nth-child(4) {
+          animation: liItens .6s 4s linear  both;
+          }
           &::before {
             content: " ";
             background: #fbd214;
@@ -120,6 +132,33 @@ export default {
         width: 700px;
       } 
    }
+  }
+}
+
+@keyframes ulbar {
+  0% {
+    height: 0%
+  }
+  25% {
+    height: 25%
+  }
+  50% {
+    height: 50%
+  }
+  75% {
+    height: 75%
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes liItens {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

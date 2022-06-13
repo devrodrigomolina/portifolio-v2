@@ -70,7 +70,7 @@ export default {
         position: absolute;
         left: 16px;
         width: 4px;
-        height: 100%;
+        animation: ulbar 2s linear both;
         z-index: 400;
         border-radius: 1rem;
       }   
@@ -78,6 +78,10 @@ export default {
         text-align: justify;
         width: 700px;
         margin-bottom: 50px;
+
+        &:nth-child(2) {
+          animation: liItens .3s 1s linear  both;
+        }
         &::before {
           content: " ";
           background: #fbd214;
@@ -118,7 +122,33 @@ export default {
     background-position: 180px;
   }
   100% {
-    background-position: 980px;
+    background-position: 1180px;
+  }
+}
+@keyframes liItens {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ulbar {
+  0% {
+    height: 0%
+  }
+  25% {
+    height: 25%
+  }
+  50% {
+    height: 50%
+  }
+  75% {
+    height: 75%
+  }
+  100% {
+    height: 100%;
   }
 }
 </style>

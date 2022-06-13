@@ -25,7 +25,7 @@
         <i class="fa-solid fa-list-check"></i>
         <p>Projetos</p>
       </router-link>
-      <router-link to="/contato" class="itens">
+      <router-link to="/contatos" class="itens">
         <i class="fa-solid fa-id-card"></i>
         <p>Contato</p>
       </router-link>

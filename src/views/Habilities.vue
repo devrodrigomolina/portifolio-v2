@@ -1,14 +1,16 @@
 <template>
   <div class="habilidades">
-    <slot />
-    <div class="infos">
-      <h1>Minhas Habilidades</h1>
-    </div>
+    <div class="container">
+      <div class="infos">
+        <h1>Minhas Habilidades</h1>
+      </div>
       <div class="stacks">
         <transition name="habilities" :appear="true">
           <CardsHabilities/>
         </transition>
       </div>
+    </div>
+    <slot />
   </div>
 </template>
 
@@ -25,19 +27,24 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
 .habilidades {
-  .infos {
-    position: relative;
+  .container {  
+    position: absolute;
     z-index: 10;
-    h1 { 
-      font-family: 'Poppins';
-      background: linear-gradient(to right, #c7c3c3 0, rgb(255, 255, 255) 10%, #c7c3c3 20%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 3s infinite linear;
-      animation-fill-mode: forwards;
-      font-weight: 600;
-      font-size: 3rem ;
-      padding:110px 180px;
+    .infos {
+      margin:110px 180px;
+      h1 { 
+        font-family: 'Poppins';
+        background: linear-gradient(to right, #c7c3c3 0, rgb(255, 255, 255) 10%, #c7c3c3 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 3s infinite linear;
+        animation-fill-mode: forwards;
+        font-weight: 600;
+        font-size: 3rem ;
+      }
+    }
+    .stacks {
+      margin-left: 160px;
     }
   }
 }

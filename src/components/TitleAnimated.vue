@@ -1,8 +1,12 @@
 <template>
   <div class="container-infos">
-    <h2 class="title">RODRIGO MOLINA DEVELOPER</h2>
-    <p>Desenvolvimento de sites responsivos usando HTML, CSS, SASS, JS, VUE.JS.</p>
-    <h3 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h3>
+    <transition mode="in-out" name="top"  :appear="true">
+      <h2 class="title">RODRIGO MOLINA DEVELOPER</h2>
+    </transition>
+    <transition name="left" :appear="true">
+      <p>Desenvolvimento de sites responsivos usando HTML, CSS, SASS, JS, VUE.JS.</p>
+      <h3 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h3>
+    </transition>
   </div>
 </template>
 
@@ -61,5 +65,36 @@ export default {
     font-size: 9px;
   }
 }
+}
+
+// ANIMAÇOES
+
+// ANIMAÇÃO TEXTO
+.top-enter, .top-leave-to {
+  opacity: 0;
+  transform: translateY(-150px);
+}
+.top-enter-active,
+.top-leave-active {
+  transition: all 2s
+}
+.top-enter-to,
+.top-leave {
+  transform: translateY(0px);
+  opacity: 1;
+}
+// ANIMACOES SUBTITULO
+.left-enter, .left-leave-to {
+  opacity: 0;
+  transform: translateX(-150px);
+}
+.left-enter-active,
+.left-leave-active {
+  transition: all 2s;
+}
+.left-enter-to,
+.left-leave {
+  opacity: 1;
+  transform: translateX(0px);
 }
 </style>

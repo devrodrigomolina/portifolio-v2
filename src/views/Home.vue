@@ -3,23 +3,25 @@
     <slot></slot>
     <TitleAnimated />  
     <ModalMessage :modal="modalOpen" @update:openModal="modalOpen = false"/>
-    <div class="container-itens">
-      <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
-      <div class="itens">
-        <img @click="modalOpen = !modalOpen" class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
-        <router-link to="/search">
-          <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
-        </router-link>
-        <router-link to="/projects"> 
-          <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
-        </router-link>
+    <transition name="rigth" :appear="true">
+      <div class="container-itens">
+        <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
+        <div class="itens">
+          <img @click="modalOpen = !modalOpen" class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
+          <router-link to="/search">
+            <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
+          </router-link>
+          <router-link to="/projects"> 
+            <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
+          </router-link>
 
-        <img @click="modalOpen = !modalOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
+          <img @click="modalOpen = !modalOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
 
-        <ToogleTheme />
-        <ArrowEfectsMouse/>
+          <ToogleTheme />
+          <ArrowEfectsMouse/>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -185,4 +187,21 @@ export default {
     }
   }
 }
+
+// ANIMAÇÕES
+.rigth-enter, .rigth-leave-to {
+  opacity: 0;
+  transform: translateX(150px);
+}
+.rigth-enter-active,
+.rigth-leave-active {
+  transition: all 1s
+}
+.rigth-enter-to,
+.rigth-leave {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+
 </style>

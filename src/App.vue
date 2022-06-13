@@ -3,7 +3,6 @@
     <NavBar />
       <transition mode="out-in"> 
         <router-view :class="themeCurrent">
-
           <vue-particles v-if="themeCurrent" class="particles"
             :particlesNumber="26"
             shapeType="star"

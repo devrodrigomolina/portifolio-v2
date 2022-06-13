@@ -14,7 +14,6 @@ export default {
   width: 100vw;
   height:100vh;
   position: absolute;
-  z-index: 1;
   background-color:#BFDFEC;
   background-repeat:repeat-x;
   background-image:url("https://i.stack.imgur.com/b7z29.png");
@@ -26,7 +25,7 @@ export default {
   width: 100vw;
   height: 320vh;
   position: absolute;
-  z-index: 1;
+
   background-color:#BFDFEC;
   background-repeat:repeat-x;
   background-image:url("https://i.stack.imgur.com/b7z29.png");

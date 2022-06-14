@@ -1,7 +1,6 @@
 <template>
   <div class="container-studies">
     <slot />
-
     <div class="infos">
       <h1>Oque estou estudando</h1>
       <p>Atualmente estudo Desenvolvedor Front End Freelancer cusando Analise e Desenvolvimento de Sistemas pela UNIFCV. Constantemente antenado à novas tendências tecnológicas, fiz cursos técnicos em Desenvolvimento Web pela Origamid, B7WEB, Alura e varios outros, Tenho 1,5 anos atuando como desenvolvedor front-end, atualmente faço trabalhos Freelancer, porem estou aberto para propostas de trabalho.</p>

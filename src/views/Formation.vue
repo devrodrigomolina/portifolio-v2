@@ -89,16 +89,16 @@ export default {
           text-align: justify;
           margin-bottom: 50px;
           &:nth-child(1) {
-          animation: liItens .3s 1s linear both;
+            animation: liItens .1s linear both;
           }
           &:nth-child(2) {
-          animation: liItens .4s 2s linear  both;
+            animation: liItens .3s 2s linear  both;
           }
           &:nth-child(3) {
           animation: liItens .5s 3s linear  both;
           }
           &:nth-child(4) {
-          animation: liItens .6s 4s linear  both;
+            animation: liItens .7s 5s linear  both;
           }
           &::before {
             content: " ";

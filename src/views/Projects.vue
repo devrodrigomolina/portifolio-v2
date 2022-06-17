@@ -3,15 +3,9 @@
     <div class="container">
 
       <div class="left">
-        <div class="infos">
-          <h1>Oque estou estudando</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi cupiditate, enim ratione vel illum veritatis distinctio dolores rerum ipsum ut sint debitis harum. Saepe dolore enim molestias quidem assumenda consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ut porro qui, vitae ad natus facilis tempora ipsa consectetur asperiores dolores unde itaque temporibus incidunt adipisci non aliquam debitis sit!</p>
-        </div>
-        <div class="conteudo">
-          <p>asdasdsad</p>
-        </div>
+        <h1>Meus Projetos</h1>
+        <Carrossel/>
       </div>
-
       <div class="rigth">
         <div class="image">
           <img src="@/assets/background-projects.png" alt="">
@@ -23,8 +17,11 @@
 </template>
 
 <script>
+import Carrossel from "@/components/Carrossel.vue"
 export default {
-
+  components: {
+    Carrossel
+  }
 }
 </script>
 
@@ -33,29 +30,38 @@ export default {
   .container {
     position: absolute;
     display: flex;
+    justify-content: flex-end;
     width: 100vw;
     height: 100%;
     .left {
-      border: 1px solid red;
+      position: absolute;
+      z-index: 10;
+      left: 90px;
       width: 1150px;
-      padding: 130px;    
-      .infos {
-        color: white;
-     
-        .conteudo {
-        }
-        h1 {
-          font-size: 3rem;
-        }
+      margin-left: 100px;    
+      margin-top: 80px;    
+      h1 { 
+        margin-bottom: 40px;
+        font-family: 'Poppins';
+        background: linear-gradient(to right, #707070 0, rgb(255, 255, 255) 10%, #707070 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 3s infinite linear;
+        animation-fill-mode: forwards;
+        font-weight: 600;
+        font-size: 3rem ;
       }
     }
     .rigth {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      align-items: flex-end;
+      position: relative;
+      z-index: 9;
       .image {
         img {
-          width: 700px;
+          width: 800px;
+          opacity: 0.7;
+          margin-right: 40px;
         }
       }
     }

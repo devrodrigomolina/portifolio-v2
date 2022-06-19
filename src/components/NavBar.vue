@@ -72,7 +72,7 @@ export default {
   height: 100vh;
   border-right: 1px solid rgb(124, 124, 124);
   background-size: 20px 20px;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   border-radius: 0px 15px 15px 0px;
   @include transition-opacity1;

@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     themeCurrent() {
-      return this.$store.state.themeCurrent ? 'dark' : ''
+      return this.$store.state.themeCurrent
     }
   },  
   created() {
@@ -55,23 +55,25 @@ export default {
 html {
   font-family: 'Kanit', sans-serif;
   overflow-x: hidden;
-  background:  rgb(4, 6, 10);
+  background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
 }
 
 .dark {
-  width: 100vw;  
-  height: 100vh;  
-  //background:  rgb(4, 6, 10);
-  background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
+  width: 100vw;    
+  background:  rgb(3, 3, 3);
 }
 canvas {
+  background-image: radial-gradient(circle, rgba(15,18,36,1) 0%, rgba(9,13,25,1) 31%, rgb(1, 1, 3) 77%);
+  width: 100vw;
   display: block;
+  position: fixed;
+  z-index: 1;
 }
 
 #particles-js {
-  position: absolute;
   width: 100vw;
   height: 100vh;
+  position: absolute;
   z-index: 1;
 }
 a {

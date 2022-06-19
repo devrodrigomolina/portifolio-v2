@@ -1,18 +1,15 @@
 <template>
-  <div class="projetos">
-    <div class="container">
-
-      <div class="left">
-        <h1>Meus Projetos</h1>
-        <Carrossel/>
-      </div>
-      <div class="rigth">
-        <div class="image">
-          <img src="@/assets/background-projects.png" alt="">
-        </div>
+  <div class="container">
+    <slot/>
+    <div class="left">
+      <h1>Meus Projetos</h1>
+      <Carrossel/>
+    </div>
+    <div class="rigth">
+      <div class="image">
+        <img src="@/assets/background-projects.png" alt="">
       </div>
     </div>
-    <slot />
   </div>
 </template>
 
@@ -26,47 +23,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projetos {  
-  .container {
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    width: 100vw;
-    height: 100%;
-    .left {
-      position: absolute;
-      z-index: 10;
-      left: 90px;
-      width: 1150px;
-      margin-left: 100px;    
-      margin-top: 80px;    
-      h1 { 
-        margin-bottom: 40px;
-        font-family: 'Poppins';
-        background: linear-gradient(to right, #707070 0, rgb(255, 255, 255) 10%, #707070 20%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: shine 3s infinite linear;
-        animation-fill-mode: forwards;
-        font-weight: 600;
-        font-size: 3rem ;
-      }
+
+.container {
+  position: relative; 
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+
+  .left {
+    position: relative; 
+      z-index: 2;
+    left: 90px;
+    width: 1150px;
+    margin-left: 100px;    
+    margin-top: 80px;    
+    h1 { 
+      margin-bottom: 40px;
+      font-family: 'Poppins';
+      background: linear-gradient(to right, #707070 0, rgb(255, 255, 255) 10%, #707070 20%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s infinite linear;
+      animation-fill-mode: forwards;
+      font-weight: 600;
+      font-size: 3rem ;
     }
-    .rigth {
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      z-index: 9;
-      .image {
-        img {
-          width: 800px;
-          opacity: 0.7;
-          margin-right: 40px;
-        }
+  }
+  .rigth {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+    .image {
+      img {
+        width: 800px;
+        opacity: 0.7;
+       
       }
     }
   }
 }
+
 
 @keyframes shine {
   0% {

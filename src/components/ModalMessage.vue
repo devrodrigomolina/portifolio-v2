@@ -4,12 +4,12 @@
       <button @click="openModal">X</button>
       <div class="mensagem">
         <h2>Se quiser mandar uma mensagem diretamente daqui, basta enviar abaixo:</h2>
-        <div class="inputs">
+        <form  method="post" action="mailto:dev.rodrigomolina@gmail.com" class="inputs">
           <input type="text" placeholder="Nome" id="name">
           <input type="email" placeholder="Email" name="" id="email">
           <textarea name="" id="" cols="30" rows="10"></textarea>
           <Button/>
-        </div>
+        </form>
         <h2>Ou se preferir, entre em contato direto:</h2>
         <div class="contatos-sociais">
           <a class="itens-sociais" target="_blank" href="https://www.linkedin.com/in/devrodrigomolina/">

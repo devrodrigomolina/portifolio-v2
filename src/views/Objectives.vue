@@ -1,6 +1,6 @@
 <template>
   <div class="container-objectives">
-    <slot />
+    <slot></slot>
     <div class="title">
       <h1>Meus objetivos</h1>
     </div>
@@ -18,9 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 .container-objectives {
+
   .title {
-    position: relative;
-    z-index: 10;
     width: 1000px;
     padding:  110px 180px;
     h1 { 
@@ -35,8 +34,7 @@ export default {
     }
   }
   .infos {
-    position: relative;
-    z-index: 10;
+
     width: 800px;
     margin: 120px;
     background: rgba(255, 0, 0, 0.404);

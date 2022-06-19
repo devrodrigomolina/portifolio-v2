@@ -3,6 +3,8 @@
     <slot></slot>
     <TitleAnimated />  
     <ModalMessage :modal="modalOpen" @update:openModal="modalOpen = false"/>
+    <ModalVideos :modalVideos="modalVideosOpen" @update:openModal="modalVideosOpen = false"/>
+    
     <transition name="rigth" :appear="true">
       <div class="container-itens">
         <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
@@ -15,7 +17,7 @@
             <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
           </router-link>
 
-          <img @click="modalOpen = !modalOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
+          <img @click="modalVideosOpen = !modalVideosOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
 
           <ToogleTheme />
           <ArrowEfectsMouse/>
@@ -30,20 +32,23 @@ import ToogleTheme from '@/components/ToogleTheme.vue'
 import ArrowEfectsMouse from '@/components/ArrowEfectsMouse.vue'
 import TitleAnimated from '@/components/TitleAnimated.vue'
 import ModalMessage from '@/components/ModalMessage.vue'
+import ModalVideos from '@/components/ModalVideos.vue'
 
 export default {
   name: 'Home',
   el: '#home',
   data() {
     return {
-      modalOpen: false
+      modalOpen: false,
+      modalVideosOpen: false
     }
   },
   components: { 
     ToogleTheme,
     ArrowEfectsMouse,
     TitleAnimated,
-    ModalMessage
+    ModalMessage,
+    ModalVideos
   },
   methods: {
     mooveTitle(event) {

@@ -6,15 +6,23 @@
     <div class="container-projects">
       <div class="conteudo" v-for="(projects, index) in projetos" :key="index">
         <div class="infos">
-          <h2>{{projects.name}}</h2>
+          <h1>{{projects.name}}</h1>
           <p>{{projects.infos}}</p>
         </div>
         <div class="projetos">
           <video class="video" width="800px" style="border: 2px solid green; border-radius: 10px" autoplay muted loop>
             <source :src="projects.videoURL" type="video/mp4">  
           </video>
-          <div class="stacks">
-            <p>Stacks: {{projects.stacks}}</p>
+          <div class="stacks-sociais">
+            <p>Stacks: </p>
+            <div class="img-stack" v-for="stack in projects.stacks" :key="stack">
+              <img :src="stack" alt="" srcset="">
+            </div>
+            <div class="sociais">
+              <a class="itens-sociais" target="_blank" href="https://github.com/FOXXX2K">
+                <img src="@/assets/header/github.svg" alt="">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -42,8 +50,9 @@ export default {
         {
           name: 'Projeto Freelance StabelPiercing',
           infos: 'O maior desafio de ser freelancer é que você tem que ser um pouquinho de tudo ( Designer, Programador, etc), Este projeto foi desafiador, pois o cliente me passou apenas as cores e as fontes que ele gostaria de ter no site dele, Mas como sou apaixonado por desafios fui fazendo detalhe por detalhe até chegar neste resultado, E o mais importante é que o cliente ficou bem satisfeito com o resultado.',
-          stacks: 'JAVASCRIPT, VUE.JS, CSS',
+          stacks: ["https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",'https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D' ],
           videoURL: StabelPiercing
+
         },
         {
           name: 'Projeto Counter Strike Global ofensive',
@@ -98,9 +107,10 @@ export default {
     .conteudo {
       width: 900px;
       transition: transform 0.5s;
-      .infos, h2 {
+      .infos, h1 {
         color: white;
-        padding-bottom: 20px;
+        font-size: 2.5rem;
+        padding-bottom: 10px;
         p {
           width: 800px;
           height: 100px;
@@ -113,8 +123,29 @@ export default {
           transform: translateX(0);
           object-fit: cover;
         }
-        .stacks {
+        .stacks-sociais {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          background: rgb(49, 48, 48);
+          border-radius: 20px;
+          padding-left: 10px;
           color: white;
+          .img-stack {
+            display: flex;
+            margin-left: 20px;
+          }
+          .sociais {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 20px;
+            margin-top: 5px;
+            img {
+              width: 40px;
+            }
+          }
         }
       }
 

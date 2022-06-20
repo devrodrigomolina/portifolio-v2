@@ -5,8 +5,9 @@
       <h1>Meus objetivos</h1>
     </div>
     <div class="infos">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ducimus sint a veniam, cum et harum eius nisi magni repudiandae, aliquam perferendis debitis eos ut esse soluta fugiat modi excepturi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime sed itaque alias ab cumque numquam praesentium! Modi assumenda optio tempora illum veritatis. Modi autem ducimus error nesciunt alias, assumenda sit!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos neque deserunt corporis quas molestiae facilis placeat earum iure, modi quisquam eius eaque voluptate accusantium minus, eum sunt libero sint tempore?</p>
     </div>
+
   </div>
 </template>
 
@@ -20,6 +21,8 @@ export default {
 .container-objectives {
 
   .title {
+    position: relative;
+    z-index: 10;
     width: 1000px;
     padding:  110px 180px;
     h1 { 
@@ -34,7 +37,8 @@ export default {
     }
   }
   .infos {
-
+    position: relative;
+    z-index: 10;
     width: 800px;
     margin: 120px;
     background: rgba(255, 0, 0, 0.404);

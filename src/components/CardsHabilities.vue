@@ -59,7 +59,6 @@ export default {
   max-width: 85vw;
   display: flex;
   position: relative;
-  margin: 0 auto;
   z-index: 10;
   .cards {
     margin-left: 30px;

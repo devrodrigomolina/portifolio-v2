@@ -8,23 +8,9 @@
       
       <div class="lista">
         <ul>
-          
           <li>
-            <p class="date">2020 - 2021</p>
-            <p class="info-form">Desenvolvedor Front End Freelancer cusando Analise e Desenvolvimento de Sistemas pela UNIFCV.
-            Constantemente antenado à novas tendências tecnológicas, fiz cursos técnicos em Desenvolvimento Web pela Origamid, B7WEB, Alura e varios outros, Tenho 1,5 anos atuando como desenvolvedor front-end, atualmente faço trabalhos Freelancer, porem estou aberto para propostas de trabalho.</p>
-          </li>
-          <li>
-            <p class="date">2021 - 2022</p>
-            <p class="info-form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quidem vel tempore ullam aliquid dolore quo quibusdam, aperiam earum velit, culpa ipsa accusantium praesentium expedita sed obcaecati voluptates amet ab!</p>
-          </li>
-          <li>
-            <p class="date">2021 - 2022</p>
-            <p class="info-form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quidem vel tempore ullam aliquid dolore quo quibusdam, aperiam earum velit, culpa ipsa accusantium praesentium expedita sed obcaecati voluptates amet ab!</p>
-          </li>
-          <li>
-            <p class="date">2021 - 2022</p>
-            <p class="info-form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quidem vel tempore ullam aliquid dolore quo quibusdam, aperiam earum velit, culpa ipsa accusantium praesentium expedita sed obcaecati voluptates amet ab!</p>
+            <p class="date">UNIFCV - Análise e Desenvolvimento de Sistemas | 2022 - 2024</p>
+              <p class="info-form">• Em andamento</p>
           </li>
         </ul>
       </div>
@@ -80,7 +66,7 @@ export default {
           position: absolute;
           left: 16px;
           width: 4px;
-          animation: ulbar 5.5s linear both;
+          animation: ulbar .5s linear both;
           z-index: 400;
           border-radius: 1rem;
         } 

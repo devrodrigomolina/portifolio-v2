@@ -1,4 +1,9 @@
 <template>
+<div>
+
+  <div class="container-menu-mobile">
+    <button class="menu-mobile">X</button>
+  </div>
   <div class="container-navbar" :class="clearMode">
     <div class="navbar-itens fa-lg">
       <router-link  class="itens" to="/">
@@ -50,6 +55,7 @@
       </a>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -65,7 +71,15 @@ export default {
 
 <style scoped lang="scss">
 @import '../scss/_mixins.scss';
-
+.container-menu-mobile {
+  display: none;
+  .menu-mobile {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 10;
+  }
+}
 .container-navbar {
   @include column-between;
   width: 50px;
@@ -82,6 +96,7 @@ export default {
       @include transition-opacity1;
     }
   }
+
   .navbar-itens, .sociais-itens {
     @include flex-column;
     width: 100%;
@@ -121,10 +136,18 @@ export default {
 
 // RESPONSIVIDADE
 
-@media screen and (max-width: 1567px) {
-
+@media screen and (max-width: 575.98px) {
+.container-menu-mobile {
+  display: block;
+  .menu-mobile {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 10;
+  }
+}
 .container-navbar {
- // display: none;
+  display: none;
 }
 }
 

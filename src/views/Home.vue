@@ -141,52 +141,125 @@ export default {
 }
 
 // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO
-
 @media screen and (max-width: 1567px) {
  .home { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .home { 
-    .container-infos { // TEXTOS 
-      width: 280px;
-      margin-left: 40px;
-      margin-right: 0;
-      .title{
-        font-size: 50px;
-        line-height:70%;
-        letter-spacing: -3px;
+  .container-itens { // IMAGEM INTERATIVA
+    .img-principal {
+      margin-right: 100px;
+      width: 800px;
+      height: 600px;
+    }
+    .itens {
+      .img-mensagem {
+        width: 12%;
+        position: absolute;
+        top:12px;
+        right: 350px;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
-      .subtitle{
-        font-size: 8px;
+      .img-lupa {
+        top:206px;
+        left: 233px;
+        cursor: pointer;
       }
     }
+  }
+}
+}
+
+
+@media screen and (max-width: 1200px) {
+.home {
+  .container-itens { // IMAGEM INTERATIVA
+    .img-principal {
+      width: 550px;
+      height: 400px;
+    }
+    .itens {
+      .img-mensagem {
+        top: 8px;
+        right: 265px;
+      }
+      .img-projetos {
+        top:240px;
+        left: 118px;
+      }
+      .img-lupa {
+        top:134px;
+        left: 157px;
+      }
+      .img-videos {
+        top: 157px;
+        left: 4px;
+      }
+    }
+  }
+}
+}
+
+// DAQUI PRA CIMA PRONTO ##############################
+@media screen and (max-width: 768px) {
+.home {
+  flex-direction: column;
+  .container-itens { // IMAGEM INTERATIVA
+    .img-principal {
+      margin: 0 auto;
+      width: 660px;
+      height: 500px;
+    }
+    .itens {
+      .img-mensagem {
+        top:11px;
+        right: 208px;
+      }
+      .img-projetos {
+        top:304px;
+        left: 148px;
+      }
+      .img-lupa {
+        top:180px;
+        left: 195px;
+      }
+      .img-videos {
+        top: 207px;
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 575.98px) {
+  .home { 
     .container-itens {
-      margin-left: 60px;
+      margin: 0 auto;
       .img-principal {
-        width: 330px;
-        height: 250px;
+        width: 390px;
+        height: 300px;
       }
       .itens {
         .img-mensagem {
-          top: 5px;
-          right: 104px;
+          width: 14%;
+          top: 2px;
+          right: 119px;
         }
         .img-projetos {
-          top: 152px;
-          left: 75px;
+          width: 14%;
+          top: 180px;
+          left: 83px;
         }
         .img-lupa {
-          top: 90px;
-          left: 97px;
+          width: 16%;
+          top: 100px;
+          left: 110px;
         }
         .img-videos {
-          top: 104px;
-          left: 3px;
+          width: 14%;
+          top: 115px;
+          left: 0px;
         }
       }
     }

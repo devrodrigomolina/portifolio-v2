@@ -17,7 +17,6 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-
   .img-setamouse {
     width: 10%;
     position: absolute;
@@ -27,6 +26,23 @@ export default {
     cursor: pointer;
     &:hover {
       transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (max-width: 1567px) { 
+  .container {
+    .img-setamouse {
+      top: 200px;
+      right: 135px;
+    }
+  }
+}
+@media screen and (max-width: 768px) { 
+  .container {
+    .img-setamouse {
+      top: 150px;
+      right: 35px;
     }
   }
 }

@@ -127,6 +127,81 @@ export default {
   }
 }
 
+@media screen and (max-width: 1567px) { 
+  .modal {
+    width: 800px;
+    height: 600px;
+    .mensagem {
+      max-width: 600px;
+      margin: 0 auto;
+      h2 {
+        font-size: 14px;
+        margin: 20px 0px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) { 
+  .modal {
+    width: 600px;
+    height: 400px;
+    .mensagem {
+      max-width: 400px;
+      margin: 0 auto;
+      h2 {
+        font-size: 10px;
+        margin: 10px 0px;
+      }
+      .inputs {
+     
+        input, textarea {
+          margin: 10px;
+          height: 30px;
+        }
+        textarea {
+          height: 100px;
+        }
+        #message::placeholder  {
+          position: absolute;
+          top: 10px; 
+          left: 10px;
+        }
+      }
+      .contatos-sociais {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          font-size: .7rem;
+          text-align: center;
+          color: white;
+        }
+        img {
+          width: 30px;
+        }
+      } 
+    }
+
+  }
+}
+
+@media screen and (max-width: 575.98px) { 
+  .modal {
+    width: 300px;
+    height: 420px;
+    .mensagem {
+      max-width: 250px;
+      margin: 0 auto;
+      h2 {
+        width: 200px;
+        font-size: 10px;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+
 .v-enter, .v-leave-to {
   top: -130px;
   opacity: 0;

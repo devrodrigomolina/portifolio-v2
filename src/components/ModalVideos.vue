@@ -25,6 +25,9 @@ export default {
 <style lang="scss" scoped>
 
 .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1000px;
   height: 800px;
   background: rgba(27, 26, 26, 0.884);

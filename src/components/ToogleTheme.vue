@@ -70,4 +70,41 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1567px) { 
+  .container {
+    .img-lampada {
+      top: 70px;
+      right: 190px;
+    }
+    .img-lampada-desligada {
+      top: 70px;
+      right: 190px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) { 
+  .container {
+    .img-lampada {
+      top: 50px;
+      right: 140px;
+    }
+    .img-lampada-desligada {
+      top: 50px;
+      right: 140px;
+    }
+  }
+}
+@media screen and (max-width: 768px) { 
+  .container {
+    .img-lampada {
+      top: 60px;
+      right: 105px;
+    }
+    .img-lampada-desligada {
+      top: 60px;
+      right: 105px;
+    }
+  }
+}
 </style>

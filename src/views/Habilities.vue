@@ -1,5 +1,6 @@
 <template>
   <div class="habilidades">
+    <slot />
     <div class="container">
       <div class="infos">
         <h1>Minhas Habilidades</h1>
@@ -10,7 +11,6 @@
         </transition>
       </div>
     </div>
-    <slot />
   </div>
 </template>
 
@@ -27,12 +27,14 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
 .habilidades {
+
   .container {  
-    position: absolute;
-    z-index: 10;
+
     .infos {
-      margin:110px 180px;
       h1 { 
+        padding:110px 180px;
+        position: relative;
+        z-index: 2;
         font-family: 'Poppins';
         background: linear-gradient(to right, #c7c3c3 0, rgb(255, 255, 255) 10%, #c7c3c3 20%);
         -webkit-background-clip: text;

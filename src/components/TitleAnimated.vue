@@ -32,7 +32,7 @@ export default {
     -webkit-background-clip: text;
     position: relative; 
     text-align:center;
-    line-height:80px;
+    line-height:9vh;
     letter-spacing: -5px;
     cursor: default;
   }
@@ -54,19 +54,58 @@ export default {
   }
 }
 
-@media screen and (max-width: 768px) { 
-.container-infos { 
+@media screen and (max-width: 1567px) { 
+.container-infos { // TEXTOS 
+  margin-left: 200px;
   .title{
-    font-size: 9vw;
-    line-height:30px;
-    letter-spacing: -1px;
+    font-size: 7vw;
+    line-height:75px;
+    letter-spacing: -6px;
   }
   .subtitle{
-    font-size: 9px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top:15px;
+    color: #DDDDDC;
+  }
+  p {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    color: #DDDDDC;
   }
 }
 }
 
+@media screen and (max-width: 768px) { 
+  .container-infos { // TEXTOS 
+  margin: 0 auto;
+  .title{
+    margin: 0 auto;
+    width: 400px;
+    font-size: 10vw;
+    line-height:52px;
+    letter-spacing: -3px;
+  }
+}
+}
+
+@media screen and (max-width: 575.98px) { 
+  .container-infos { // TEXTOS 
+  margin: 0 auto;
+  .title{
+    margin: 0 auto;
+    width: 300px;
+    font-size: 13vw;
+    line-height:35px;
+    letter-spacing: -2px;
+  }
+}
+}
 // ANIMAÇOES
 
 // ANIMAÇÃO TEXTO

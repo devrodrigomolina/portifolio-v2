@@ -33,7 +33,7 @@ export default {
 
   .left {
     position: relative; 
-      z-index: 2;
+    z-index: 2;
     left: 90px;
     width: 1150px;
     margin-left: 100px;    

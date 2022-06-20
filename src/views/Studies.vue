@@ -6,13 +6,32 @@
       <p>Atualmente estudo Desenvolvedor Front End Freelancer cusando Analise e Desenvolvimento de Sistemas pela UNIFCV. Constantemente antenado à novas tendências tecnológicas, fiz cursos técnicos em Desenvolvimento Web pela Origamid, B7WEB, Alura e varios outros, Tenho 1,5 anos atuando como desenvolvedor front-end, atualmente faço trabalhos Freelancer, porem estou aberto para propostas de trabalho.</p>
       <ul>
         <li>
-         <p class="date">2020 - 2021</p>
-          <p class="info-form">Desenvolvedor Front End Freelancer cusando Analise e Desenvolvimento de Sistemas pela UNIFCV.
-          Constantemente antenado à novas tendências tecnológicas, fiz cursos técnicos em Desenvolvimento Web pela Origamid, B7WEB, Alura e varios outros, Tenho 1,5 anos atuando como desenvolvedor front-end, atualmente faço trabalhos Freelancer, porem estou aberto para propostas de trabalho.</p>
+         <p class="date">UNIFCV - Análise e Desenvolvimento de Sistemas | 2022 - 2024</p>
+          <p class="info-form">• Em andamento</p>
         </li>
         <li>
-          <p class="date">2021 - 2022</p>
-          <p class="info-form">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quidem vel tempore ullam aliquid dolore quo quibusdam, aperiam earum velit, culpa ipsa accusantium praesentium expedita sed obcaecati voluptates amet ab!</p>
+          <p class="date">ORIGAMID | 2022 - 2022</p>
+          <p class="info-form">• Vue.js 2 Completo</p>
+          <p class="info-form">• Vuex & Vue Router</p>
+          <p class="info-form">• Axios & REST API</p>
+        </li>
+        <li>
+          <p class="date">ORIGAMID | 2021 - 2022</p>
+          <p class="info-form">• HTML & CSS</p>
+          <p class="info-form">• Javascript Completo ES6</p>
+          <p class="info-form">• CSS Avançado Flexbox & grid</p>
+          <p class="info-form">• Manipulação do DOM</p>
+          <p class="info-form">• Javascript Assincrono</p>
+        </li>
+        <li>
+          <p class="date">JAVASCRIPT BÁSICO AO AVANÇADO | 2021 - 2021</p>
+          <p class="info-form">• JS Básico, Funcional e Orientado a Objetos.</p>
+          <p class="info-form">• Princípios da programação orientada a objetos</p>
+          <p class="info-form">• Javascript Assincrono - Promisses, Fetch, Async/Await</p>
+        </li>
+        <li>
+          <p class="date">CURSO EM VIDEO | 2021 - 2021</p>
+          <p class="info-form">• HTML5 & CSS3 MÓDULO 5/5 COMPLETO</p>
         </li>
       </ul>
 
@@ -51,17 +70,18 @@ export default {
       font-size: 3rem ;
     }
     p {
-      margin-top: 10px;
       margin-left: 8px;
       text-align: justify;
       color: white;
       /* margin-top: 200px; */
-    } 
+      color: #FFFFFF;
+
+    }
     ul {
       list-style-type: none;
       position: relative;
       padding-left: 1.5rem;
-      margin-top: 100px;
+      margin-top: 30px;
       &::before {
         content: " ";
         background: #ededed;
@@ -69,17 +89,25 @@ export default {
         position: absolute;
         left: 16px;
         width: 4px;
-        animation: ulbar 2s linear both;
+        animation: ulbar 4s linear both;
         z-index: 400;
         border-radius: 1rem;
       }   
       li {
         text-align: justify;
         width: 700px;
-        margin-bottom: 50px;
-
+        margin-bottom: 30px;
         &:nth-child(2) {
-          animation: liItens .3s 1s linear  both;
+          animation: liItens .1s 0.8s linear  both;
+        }
+        &:nth-child(3) {
+          animation: liItens .2s 1.8s linear  both;
+        }
+        &:nth-child(4) {
+          animation: liItens .3s 3s linear  both;
+        }
+        &:nth-child(5) {
+          animation: liItens .4s 4s linear  both;
         }
         &::before {
           content: " ";
@@ -95,20 +123,22 @@ export default {
         }
       }
       .date {
-        color: rgb(29, 29, 29);
+        color: #9b9b9b;
         font-size: 16px;
       }
       .info-form {
-        color: rgb(88, 88, 88);
+        color: rgba(126, 123, 123, 0.877);
         font-size: 14px;
+        font-weight: 200;
       }
     }
   }
-
   .image {
     img {
       opacity: 0.7;
       width: 600px;
+      position: relative;
+      z-index: 2;
     }
   }
 }

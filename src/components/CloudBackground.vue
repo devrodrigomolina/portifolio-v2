@@ -12,8 +12,9 @@ export default {
 <style lang="scss" scoped>
 .clouds {
   width: 100vw;
-  height:100vh;
-  position: absolute;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
   background-color:#BFDFEC;
   background-repeat:repeat-x;
   background-image:url("https://i.stack.imgur.com/b7z29.png");
@@ -23,9 +24,8 @@ export default {
 @media screen and (max-width: 1567px) {
 .clouds {
   width: 100vw;
-  height: 320vh;
-  position: absolute;
-
+  z-index: 1;
+ position: fixed;
   background-color:#BFDFEC;
   background-repeat:repeat-x;
   background-image:url("https://i.stack.imgur.com/b7z29.png");

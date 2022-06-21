@@ -50,6 +50,26 @@ export default {
   }
 }
 
+@media screen and (max-width: 1567px) { 
+  .modal {
+    width: 800px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) { 
+  .modal {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 575.98px) { 
+  .modal {
+    width: 300px;
+    height: 420px;
+  }
+}
+
 .v-enter, .v-leave-to {
   top: -130px;
   opacity: 0;

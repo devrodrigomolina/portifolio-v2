@@ -100,12 +100,80 @@ export default {
 <style lang="scss" scoped>
 .container-carrossel {
   display: flex;
+  width: 100vw;
   .container-projects {
     width: 800px;
     display: flex;
     overflow: hidden;
     .conteudo {
       width: 900px;
+      transition: transform 0.5s;
+      .infos, h1 {
+        color: white;
+        font-size: 2.5rem;
+        padding-bottom: 10px;
+        p {
+          width: 800px;
+          height: 100px;
+          font-size: 14px;
+        }
+      }
+      .projetos {
+        .video {
+          width: 100%;
+          transform: translateX(0);
+          object-fit: cover;
+          source {
+            width: 100%;
+
+          }
+        }
+        .stacks-sociais {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          background: rgb(49, 48, 48);
+          border-radius: 20px;
+          padding-left: 10px;
+          color: white;
+          .img-stack {
+            display: flex;
+            margin-left: 20px;
+          }
+          .sociais {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 20px;
+            margin-top: 5px;
+            img {
+              width: 40px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .arrow-right, .arrow-left {
+    display: flex;
+    align-self: center;
+    margin: 10px;
+  } 
+
+}
+
+
+@media screen and (max-width: 1567px) { 
+.container-carrossel {
+  display: flex;
+  .container-projects {
+    width: 600px;
+    display: flex;
+    overflow: hidden;
+    .conteudo {
+      width: 100%;
       transition: transform 0.5s;
       .infos, h1 {
         color: white;
@@ -156,7 +224,20 @@ export default {
     align-self: center;
     margin: 10px;
   } 
+}
+}
+@media screen and (max-width: 768px) { 
+  .modal {
+    width: 600px;
+    height: 400px;
+  }
+}
 
+@media screen and (max-width: 575.98px) { 
+  .modal {
+    width: 300px;
+    height: 420px;
+  }
 }
 
 </style>

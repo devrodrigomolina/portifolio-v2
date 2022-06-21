@@ -28,7 +28,7 @@ export default {
   position: relative; 
   z-index: 2;
   display: flex;
-  justify-content: flex-end;
+
   width: 100vw;
 
   .left {
@@ -51,13 +51,14 @@ export default {
     }
   }
   .rigth {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 25%;
     z-index: 1;
     .image {
       img {
-        width: 800px;
+
+        width: 40vw;
         opacity: 0.7;
        
       }

@@ -130,13 +130,28 @@ export default {
 @media screen and (max-width: 1567px) { 
   .modal {
     width: 800px;
-    height: 600px;
+    height: 500px;
     .mensagem {
       max-width: 600px;
       margin: 0 auto;
       h2 {
-        font-size: 14px;
+        font-size: 16px;
         margin: 20px 0px;
+      }
+      .inputs {
+     
+        input, textarea {
+          margin: 10px;
+          height: 30px;
+        }
+        textarea {
+          height: 100px;
+        }
+        #message::placeholder  {
+          position: absolute;
+          top: 10px; 
+          left: 10px;
+        }
       }
     }
   }

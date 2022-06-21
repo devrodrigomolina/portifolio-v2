@@ -142,7 +142,7 @@ export default {
 
 // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO // RESPONSIVO
 @media screen and (max-width: 1567px) {
- .home { 
+.home { 
   .container-itens { // IMAGEM INTERATIVA
     .img-principal {
       margin-right: 100px;

@@ -113,7 +113,8 @@ export default {
     .image {
       img {
         margin-left: 200px;
-    
+        position: relative;
+        z-index: 100;
         opacity: 0.7;
         width: 700px;
       } 

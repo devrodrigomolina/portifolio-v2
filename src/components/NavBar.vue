@@ -71,6 +71,20 @@
 <script>
 export default {
   name: 'NavBar',
+  data() {
+    return {
+      checked: false
+    }
+  },
+  methods: {
+    menuMobile() {
+      const el = document.querySelector('.container-navbar');
+      const p = document.querySelectorAll('.itens p, .itens-sociais p');
+
+      !this.checked ? el.classList.add('actived') : el.classList.remove('actived');
+      !this.checked ? p.forEach(e => e.style.opacity = '1') : '';
+    }
+  },
   computed: {
     clearMode() {
       return this.$store.state.themeCurrent ? 'nav-clearmode' : 'nav-darkmode'
@@ -195,6 +209,11 @@ export default {
 
 .container-navbar {
   display: none;
+}
+.actived {
+  display: block;
+  width: 100%;
+  background: black;
 }
 }
 

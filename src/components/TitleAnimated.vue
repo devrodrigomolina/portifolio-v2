@@ -96,13 +96,16 @@ export default {
 
 @media screen and (max-width: 575.98px) { 
   .container-infos { // TEXTOS 
-  margin: 0 auto;
+    margin: 0 auto;
   .title{
     margin: 0 auto;
     width: 300px;
     font-size: 13vw;
     line-height:35px;
     letter-spacing: -2px;
+  }
+  p {
+    font-size: 8px;
   }
 }
 }

@@ -57,10 +57,8 @@ export default {
     z-index: 1;
     .image {
       img {
-
         width: 40vw;
         opacity: 0.7;
-       
       }
     }
   }

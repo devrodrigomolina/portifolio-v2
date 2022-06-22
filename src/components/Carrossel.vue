@@ -140,7 +140,7 @@ export default {
             display: flex;
             margin-left: 20px;
           }
-          .sociais {
+          .itens-sociais {
             width: 100%;
             display: flex;
             align-items: center;
@@ -227,17 +227,35 @@ export default {
 }
 }
 @media screen and (max-width: 768px) { 
-  .modal {
-    width: 600px;
-    height: 400px;
+}
+@media screen and (max-width: 575.98px) { 
+.container-carrossel {
+  .container-projects {
+    .conteudo {
+      .infos, h1 {
+        font-size: 1rem;
+        p {
+          width: 100%;
+          text-align: center;
+          height: 100%;
+          font-size: 12px;
+        }
+      }
+      .projetos {
+        .stacks-sociais {
+          width: 100%;
+          .img-stack {
+            margin-left: 10px;
+            img {
+              width: 70px;
+            }
+          }
+        }
+      }
+
+    }
   }
 }
-
-@media screen and (max-width: 575.98px) { 
-  .modal {
-    width: 300px;
-    height: 420px;
-  }
 }
 
 </style>

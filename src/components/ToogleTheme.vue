@@ -107,4 +107,16 @@ export default {
     }
   }
 }
+@media screen and (max-width: 575.98px) { 
+  .container {
+    .img-lampada {
+      top: 40px;
+      right: 45px;
+    }
+    .img-lampada-desligada {
+      top: 40px;
+      right: 45px;
+    }
+  }
+}
 </style>

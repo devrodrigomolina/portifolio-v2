@@ -1,8 +1,18 @@
 <template>
 <div>
-
-  <div class="container-menu-mobile">
-    <button class="menu-mobile">X</button>
+  <div class="container-hamburguer">
+    <input 
+      type="checkbox"
+      id="btn-mobile"
+      class="btn-mobile"
+      v-model="checked"
+      @click="menuMobile"
+    >
+    <label for="btn-mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
   </div>
   <div class="container-navbar" :class="clearMode">
     <div class="navbar-itens fa-lg">
@@ -71,15 +81,10 @@ export default {
 
 <style scoped lang="scss">
 @import '../scss/_mixins.scss';
-.container-menu-mobile {
+.btn-mobile {
   display: none;
-  .menu-mobile {
-    width: 80px;
-    height: 80px;
-    position: relative;
-    z-index: 10;
-  }
 }
+
 .container-navbar {
   @include column-between;
   width: 50px;
@@ -96,7 +101,6 @@ export default {
       @include transition-opacity1;
     }
   }
-
   .navbar-itens, .sociais-itens {
     @include flex-column;
     width: 100%;
@@ -137,15 +141,58 @@ export default {
 // RESPONSIVIDADE
 
 @media screen and (max-width: 575.98px) {
-.container-menu-mobile {
-  display: block;
-  .menu-mobile {
-    width: 40px;
-    height: 40px;
+.container-hamburguer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  z-index: 9999;
+  .btn-mobile {
     position: absolute;
-    z-index: 10;
+    opacity: 0;
+  }
+  label {
+    cursor: pointer;
+    position: relative;
+    left: -65px;
+    top: 30px;
+    display: block;
+    height: 22px;
+    width: 30px;
+    span {
+      position: absolute;
+      display: block;
+      height: 4px;
+      width: 100%;
+      z-index: 99999;
+      border-radius: 30px;
+      background: white;
+      transition: all .3s;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+  }
+  .btn-mobile:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  .btn-mobile:checked + label span:nth-child(2) {
+    opacity: 0;
+  }
+  .btn-mobile:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 10px;
   }
 }
+
 .container-navbar {
   display: none;
 }

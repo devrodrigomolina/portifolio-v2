@@ -65,8 +65,8 @@ export default {
 
 @media screen and (max-width: 575.98px) { 
   .modal {
-    width: 300px;
-    height: 420px;
+    width: 380px;
+    height: 500px;
   }
 }
 

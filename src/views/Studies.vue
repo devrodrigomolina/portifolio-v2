@@ -3,7 +3,7 @@
     <slot />
     <div class="infos">
       <h1>Oque estou estudando</h1>
-      <p>Atualmente estudo Desenvolvedor Front End Freelancer cusando Analise e Desenvolvimento de Sistemas pela UNIFCV. Constantemente antenado à novas tendências tecnológicas, fiz cursos técnicos em Desenvolvimento Web pela Origamid, B7WEB, Alura e varios outros, Tenho 1,5 anos atuando como desenvolvedor front-end, atualmente faço trabalhos Freelancer, porem estou aberto para propostas de trabalho.</p>
+      <p class="text-subtitle">Atualmente estudo Desenvolvedor Front End Freelancer cusando Analise e Desenvolvimento de Sistemas pela UNIFCV. Constantemente antenado à novas tendências tecnológicas, fiz cursos técnicos em Desenvolvimento Web pela Origamid, B7WEB, Alura e varios outros, Tenho 1,5 anos atuando como desenvolvedor front-end, atualmente faço trabalhos Freelancer, porem estou aberto para propostas de trabalho.</p>
       <ul>
         <li>
          <p class="date">UNIFCV - Análise e Desenvolvimento de Sistemas | 2022 - 2024</p>
@@ -69,13 +69,9 @@ export default {
       font-weight: 600;
       font-size: 3rem ;
     }
-    p {
-      margin-left: 8px;
+    .text-subtitle {
       text-align: justify;
-      color: white;
-      /* margin-top: 200px; */
       color: #FFFFFF;
-
     }
     ul {
       list-style-type: none;
@@ -125,11 +121,13 @@ export default {
       .date {
         color: #9b9b9b;
         font-size: 16px;
+        margin-left: 8px;
       }
       .info-form {
         color: rgba(126, 123, 123, 0.877);
         font-size: 14px;
         font-weight: 200;
+        margin-left: 8px;
       }
     }
   }
@@ -141,6 +139,42 @@ export default {
       z-index: 2;
     }
   }
+}
+
+@media screen and (max-width: 575.98px) {
+.container-studies {  
+  .infos {
+    width: 100vw;
+    h1 { 
+      padding-top: 80px;
+      text-align: center;
+      font-size: 1.5rem ;
+    }
+    .text-subtitle {
+      width: 300px;
+      margin: 20px auto;
+      font-size: 13px;
+      text-align: center;
+      color: white;
+    }
+    ul {
+      .date,.info-form {
+        font-size: 13px;
+      }
+    }
+  }
+  .image {
+    img {
+
+      opacity: 0.3;
+      width: 300px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+}
 }
 
 @keyframes shine {

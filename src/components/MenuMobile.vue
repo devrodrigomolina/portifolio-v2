@@ -35,7 +35,6 @@ export default {
           el.classList.remove('actived') ;
           this.checked = false
         })
-
       })
     },
   },
@@ -58,7 +57,7 @@ export default {
   position: fixed;
   z-index: 9999;  
   
-
+  transition: all .3s;
   .btn-mobile {
     position: absolute;
     opacity: 0;

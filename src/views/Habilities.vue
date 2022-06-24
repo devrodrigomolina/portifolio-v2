@@ -27,9 +27,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
 .habilidades {
-
   .container {  
-
     .infos {
       h1 { 
         padding:110px 180px;
@@ -73,6 +71,19 @@ export default {
   }
 }
 }
+@media screen and (max-width: 575.98px) {
+.habilidades {
+  .container {  
+    .infos {
+      h1 { 
+        padding: 100px 0px;
+        font-size: 1.6rem ;
+      }
+    }
+  }
+}
+}
+
 
 // ANIMAÇÕES
 .habilities-enter, .habilities-leave-to {

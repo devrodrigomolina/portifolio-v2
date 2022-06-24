@@ -130,18 +130,19 @@ export default {
 
 
 @media screen and (max-width: 575.98px) {
-  .container-navbar {
-    display: none;
-    padding-top: 80px;
-    transition: all .3s;
-  }
-  .actived {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    transition: all .3s;
-  }
+
+.container-navbar {
+  display: none;
+  padding-top: 80px;
+}
+
+.actived {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+  
 }
 
 

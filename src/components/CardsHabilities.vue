@@ -111,4 +111,48 @@ export default {
     }
   }
 }
+@media screen and (max-width: 575.98px) {
+.container-cards {
+  width: 100vw;
+  max-width: 35vw;
+  .cards {
+    margin-left: 0px;
+    .itens {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 300px;
+      height: 400px;
+      padding: 30px;
+      background: rgba(94, 91, 91, 0.37);
+      transition: all .6s;
+      border-radius: 10px;
+      .sub-habilities {
+        font-size: 1rem;
+        opacity: 0;
+        text-align: center;
+        transition: all .6s;
+      }
+      &:hover {
+        transform: scale(1.1);
+        height: 500px;
+        .sub-habilities {
+          font-size: 1rem;
+          opacity: 1;
+        }
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      p {
+        font-size: 13px;
+        margin: 70px auto;
+        text-align: justify;
+        color: white;
+      }
+    }
+  }
+}
+}
 </style>

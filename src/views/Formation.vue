@@ -118,9 +118,48 @@ export default {
         opacity: 0.7;
         width: 700px;
       } 
+    }
+  }
+}
+
+
+@media screen and (max-width: 575.98px) { 
+.container-formation {
+  .title {
+    width: 100%;
+    text-align: center;
+    padding:  100px 0px;
+    h1 { 
+      font-size: 1.5rem ;
+    }
+  }
+  .container {
+    .lista {
+      margin-left: 4px;
+      ul {
+        li {
+          .date {
+            font-size: 13px;
+          }
+          .info-form {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .image {
+      img {
+        margin-left: 0px;
+        position: absolute;
+        left: 0;
+        bottom: -30%;
+        width: 400px;
+      } 
+    }
    }
   }
 }
+
 
 @keyframes ulbar {
   0% {

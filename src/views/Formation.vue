@@ -138,6 +138,7 @@ export default {
       margin-left: 4px;
       ul {
         li {
+          width: 100%;
           .date {
             font-size: 13px;
           }
@@ -152,8 +153,8 @@ export default {
         margin-left: 0px;
         position: absolute;
         left: 0;
-        bottom: -30%;
-        width: 400px;
+        top: 60%;
+        width: 100%;
       } 
     }
    }

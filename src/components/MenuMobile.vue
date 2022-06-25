@@ -48,7 +48,6 @@ export default {
 }
 
 @media screen and (max-width: 575.98px) {
-
 .container-hamburguer {
   display: flex;
   justify-content: flex-end;
@@ -56,14 +55,11 @@ export default {
   height: 60px;
   position: fixed;
   z-index: 9999;  
-  
-  transition: all .3s;
   .btn-mobile {
     position: absolute;
     opacity: 0;
   }
   label {
-  
     cursor: pointer;
     position: relative;
     left: -65px;

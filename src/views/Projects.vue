@@ -28,9 +28,7 @@ export default {
   position: relative; 
   z-index: 2;
   display: flex;
-
   width: 100vw;
-
   .left {
     position: relative; 
     z-index: 2;
@@ -64,7 +62,39 @@ export default {
   }
 }
 
-
+@media screen and (max-width: 575.98px) { 
+  .container {
+    position: relative; 
+    z-index: 2;
+    display: flex;
+    width: 100vw;
+  .left {
+    position: relative; 
+    z-index: 2;
+    left: 0px;
+    width: 100vw;
+    margin-left: 0;    
+    margin-top: 80px;    
+    h1 { 
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+  .rigth {
+    position: relative;
+    .image {
+      img {
+        opacity: 0.3;
+        width: 400px;
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+        z-index: 2;
+      }
+  }
+}
+  }
+}
 @keyframes shine {
   0% {
     background-position: -380px;

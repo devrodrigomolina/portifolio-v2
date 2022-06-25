@@ -56,7 +56,6 @@ export default {
 <style lang="scss" scoped>
 .container-cards {
   width: 1600px;
-  max-width: 85vw;
   display: flex;
   position: relative;
   z-index: 10;
@@ -113,20 +112,12 @@ export default {
 }
 @media screen and (max-width: 575.98px) {
 .container-cards {
-  width: 100vw;
-  max-width: 35vw;
   .cards {
     margin-left: 0px;
     .itens {
       display: flex;
       align-items: center;
       flex-direction: column;
-      width: 300px;
-      height: 400px;
-      padding: 30px;
-      background: rgba(94, 91, 91, 0.37);
-      transition: all .6s;
-      border-radius: 10px;
       .sub-habilities {
         font-size: 1rem;
         opacity: 0;

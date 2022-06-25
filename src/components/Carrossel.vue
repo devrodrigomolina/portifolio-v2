@@ -233,12 +233,22 @@ export default {
   .container-projects {
     .conteudo {
       .infos, h1 {
-        font-size: 1rem;
+        font-size: 0.8rem;
         p {
           width: 100%;
           text-align: center;
           height: 100%;
           font-size: 12px;
+        }
+      }
+      .projetos {
+        .video {
+          width: 100%;
+          transform: translateX(0);
+          object-fit: cover;
+          source {
+            width: 100%;
+          }
         }
       }
       .projetos {
@@ -255,6 +265,12 @@ export default {
 
     }
   }
+  .arrow-right, .arrow-left {
+    width: 40px;
+    display: flex;
+    align-self: flex-end;
+    margin: 0px;
+  } 
 }
 }
 

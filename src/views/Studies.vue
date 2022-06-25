@@ -143,10 +143,11 @@ export default {
 
 @media screen and (max-width: 575.98px) {
 .container-studies {  
+        margin-bottom: 150px;
   .infos {
     width: 100vw;
     h1 { 
-      padding-top: 80px;
+      padding-top: 50px;
       text-align: center;
       font-size: 1.5rem ;
     }
@@ -158,9 +159,14 @@ export default {
       color: white;
     }
     ul {
-      .date,.info-form {
-        font-size: 13px;
+      li {
+        width: 100%;
+        .date,.info-form {
+          font-size: 13px;
+          width: 300px;
+        }
       }
+
     }
   }
   .image {

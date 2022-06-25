@@ -80,6 +80,9 @@ export default {
         font-size: 1.6rem ;
       }
     }
+    .stacks {
+      margin-left: 0;
+    }
   }
 }
 }

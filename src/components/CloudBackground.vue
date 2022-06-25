@@ -12,7 +12,7 @@ export default {
 <style lang="scss" scoped>
 .clouds {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   z-index: 1;
   background-color:#BFDFEC;
@@ -22,18 +22,8 @@ export default {
 }
 
 @media screen and (max-width: 1567px) {
-.clouds {
-  width: 100vw;
-  z-index: 1;
- position: fixed;
-  background-color:#BFDFEC;
-  background-repeat:repeat-x;
-  background-image:url("https://i.stack.imgur.com/b7z29.png");
-  animation: movement 10s linear infinite;
-}
 
 }
-
 
 @keyframes movement{
   0% {

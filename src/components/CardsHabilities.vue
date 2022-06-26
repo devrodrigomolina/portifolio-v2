@@ -33,7 +33,7 @@ export default {
           img: require('@/assets/habilities/sass.svg'),
           text: 'O SASS é uma linguagem de extensão do CSS, a sigla significa “Syntactically Awesome Style Sheets” traduzindo ao pé da letra, folhas de estilo com uma sintaxe incrível. A sua ideia é adicionar recursos especiais como variáveis, mixins, funções e operações e outras opções variadas.',
           color: '5px solid #F06292',
-          subHabilities: 'SEI LA CARAI',
+          subHabilities: '',
         },
        {
           img: require('@/assets/habilities/javascript.svg'),
@@ -45,7 +45,7 @@ export default {
           img: require('@/assets/habilities/vue-js.svg'),
           text: 'Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.',
           color: '5px solid #81C784',
-          subHabilities: 'SEI TUDO DESSA PORRA SOU UM NINJA',
+          subHabilities: '',
         },
       ]
     }

@@ -100,7 +100,6 @@ export default {
 <style lang="scss" scoped>
 .container-carrossel {
   display: flex;
-  width: 100vw;
   .container-projects {
     width: 800px;
     display: flex;

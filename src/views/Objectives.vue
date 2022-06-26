@@ -1,24 +1,21 @@
 <template>
   <div class="container-objectives">
-    <slot></slot>
-    <div class="title">
-      <h1>Meus objetivos</h1>
-    </div>
-    <div class="infos">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos neque deserunt corporis quas molestiae facilis placeat earum iure, modi quisquam eius eaque voluptate accusantium minus, eum sunt libero sint tempore?</p>
-    </div>
-
+    <slot/>
   </div>
 </template>
 
 <script>
+
+
 export default {
 
 }
 </script>
-
 <style lang="scss" scoped>
+
 .container-objectives {
+
+
 
   .title {
     position: relative;

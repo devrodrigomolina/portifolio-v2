@@ -10,15 +10,11 @@
         <img class="img-principal" src="@/assets/ImagensPS/back.png" alt="">
         <div class="itens">
           <img @click="modalOpen = !modalOpen" class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
-          <router-link to="/search">
-            <img class="img-lupa" src="@/assets/ImagensPS/lupa.png" alt="">
-          </router-link>
+          <Lupa/>
           <router-link to="/projects"> 
             <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
           </router-link>
-
           <img @click="modalVideosOpen = !modalVideosOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
-
           <ToogleTheme />
           <ArrowEfectsMouse/>
         </div>
@@ -33,6 +29,7 @@ import ArrowEfectsMouse from '@/components/ArrowEfectsMouse.vue'
 import TitleAnimated from '@/components/TitleAnimated.vue'
 import ModalMessage from '@/components/ModalMessage.vue'
 import ModalVideos from '@/components/ModalVideos.vue'
+import Lupa from '@/components/Lupa.vue'
 
 export default {
   name: 'Home',
@@ -48,7 +45,8 @@ export default {
     ArrowEfectsMouse,
     TitleAnimated,
     ModalMessage,
-    ModalVideos
+    ModalVideos,
+    Lupa
   },
   methods: {
     mooveTitle(event) {

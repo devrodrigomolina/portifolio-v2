@@ -11,9 +11,9 @@
         <div class="itens">
           <img @click="modalOpen = !modalOpen" class="img-mensagem" src="@/assets/ImagensPS/mensagem.png" alt="">
           <Lupa/>
-          <router-link to="/projects"> 
+
             <img class="img-projetos" src="@/assets/ImagensPS/projetos.png" alt="">
-          </router-link>
+
           <img @click="modalVideosOpen = !modalVideosOpen" class="img-videos" src="@/assets/ImagensPS/videos.png" alt="">
           <ToogleTheme />
           <ArrowEfectsMouse/>
@@ -109,17 +109,7 @@ export default {
           transform: scale(1.1);
         }
       }
-      .img-lupa {
-        width: 12.5%;
-        position: absolute;
-        top:214px;
-        left: 237px;
-        transition: all .3s;
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
+
 
       .img-videos {
         width: 10%;

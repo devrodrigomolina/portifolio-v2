@@ -14,13 +14,19 @@
             <source :src="projects.videoURL" type="video/mp4">  
           </video>
           <div class="stacks-sociais">
-            <p>Stacks: </p>
-            <div class="img-stack" v-for="stack in projects.stacks" :key="stack">
-              <img :src="stack" alt="" srcset="">
+            <div class="stacks">
+              <p>Stacks: </p>
+              <div class="img-stack" v-for="(stack, index) in projetos.stacks" :key="index">
+                {{stack}}
+                <img :src="stack" alt="" srcset="">
+              </div>
             </div>
             <div class="sociais">
               <a class="itens-sociais" target="_blank" href="https://github.com/FOXXX2K">
                 <img src="@/assets/header/github.svg" alt="">
+              </a>
+              <a class="itens-sociais" href="">
+                <img src="@/assets/link.png" alt="https://github.com/FOXXX2K">
               </a>
             </div>
           </div>
@@ -52,7 +58,6 @@ export default {
           infos: 'O maior desafio de ser freelancer é que você tem que ser um pouquinho de tudo ( Designer, Programador, etc), Este projeto foi desafiador, pois o cliente me passou apenas as cores e as fontes que ele gostaria de ter no site dele, Mas como sou apaixonado por desafios fui fazendo detalhe por detalhe até chegar neste resultado, E o mais importante é que o cliente ficou bem satisfeito com o resultado.',
           stacks: ["https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",'https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D' ],
           videoURL: StabelPiercing
-
         },
         {
           name: 'Projeto Counter Strike Global ofensive',
@@ -72,17 +77,17 @@ export default {
   methods: {
     arrowLeft() {
       let element = document.querySelectorAll('.conteudo');
-      this.imagesTranslate -= 800
+      this.imagesTranslate -= 100
       this.imagesTranslate <= 0 ? this.imagesTranslate = 0 : ''
 
       element.forEach(el => {
-        el.style.transform = `translateX(-${this.imagesTranslate}px)`
+        el.style.transform = `translateX(-${this.imagesTranslate}%)`
       });
     },
     arrowRight() {
       let element = document.querySelectorAll('.conteudo');
       this.imagesLimit++
-      this.imagesTranslate += 800
+      this.imagesTranslate += 100
 
       if (this.imagesLimit >= this.projetos.length) {
         this.imagesTranslate = 0
@@ -90,10 +95,10 @@ export default {
       }
 
       element.forEach(el => {
-        el.style.transform = `translateX(-${this.imagesTranslate}px)`
+        el.style.transform = `translateX(-${this.imagesTranslate}%)`
       });
     }
-  }
+  },
 }
 </script>
 
@@ -124,35 +129,42 @@ export default {
           object-fit: cover;
           source {
             width: 100%;
-
           }
         }
         .stacks-sociais {
           display: flex;
           align-items: center;
+          justify-content: space-between;
           height: 50px;
           background: rgb(49, 48, 48);
           border-radius: 20px;
           padding-left: 10px;
           color: white;
-          .img-stack {
+          .stacks {
             display: flex;
-            margin-left: 20px;
+            .img-stack {
+              display: flex;
+              margin-left: 20px;
+            }
           }
-          .itens-sociais {
-            width: 100%;
+          .sociais {
             display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-right: 20px;
-            margin-top: 5px;
-            img {
-              width: 40px;
+            .itens-sociais {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              margin-right: 20px;
+              margin-top: 5px;
+
+              img {
+                width: 30px;
+              }
+            
             }
           }
         }
       }
-
     }
   }
   .arrow-right, .arrow-left {
@@ -229,20 +241,20 @@ export default {
 }
 @media screen and (max-width: 575.98px) { 
 .container-carrossel {
-  .container-projects {
+  .container-projects { 
     .conteudo {
       .infos, h1 {
         font-size: 0.8rem;
         p {
           width: 100%;
           text-align: center;
-          height: 100%;
+          margin-bottom: 100px;
           font-size: 12px;
         }
       }
       .projetos {
         .video {
-          width: 100%;
+          width: 80vw;
           transform: translateX(0);
           object-fit: cover;
           source {

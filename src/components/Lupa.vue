@@ -30,5 +30,21 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 575.98px) { 
+  .container-lupa {
+    .img-lupa {
+      width: 12.5%;
+      position: absolute;
+      top:107px;
+      left: 117px;
+      transition: all .3s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
 </style>
 

@@ -3,10 +3,10 @@
     <transition mode="in-out" name="top"  :appear="true">
       <h2 class="title">RODRIGO MOLINA DEVELOPER</h2>
     </transition>
-    <transition name="left" :appear="true">
+    <transition-group name="left" :appear="true">
       <p>Desenvolvimento de sites responsivos usando HTML, CSS, SASS, JS, VUE.JS.</p>
       <h3 class="subtitle">const { Curioso, Inteligente, Persistente, Mentiroso } = EU </h3>
-    </transition>
+    </transition-group>
   </div>
 </template>
 

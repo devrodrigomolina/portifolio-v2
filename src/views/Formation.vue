@@ -35,7 +35,7 @@ export default {
 .container-formation {
   .title {
     position: relative;
-    z-index: 10;
+    z-index: 2;
     width: 1000px;
     padding:  110px 180px;
     h1 { 
@@ -54,7 +54,7 @@ export default {
     .lista {
       margin-left: 200px;
       position: relative;
-      z-index: 1000;
+      z-index: 2;
       ul {
         list-style-type: none;
         position: relative;
@@ -67,7 +67,7 @@ export default {
           left: 16px;
           width: 4px;
           animation: ulbar .5s linear both;
-          z-index: 400;
+          z-index: 2;
           border-radius: 1rem;
         } 
         li {
@@ -96,7 +96,7 @@ export default {
             height: 12px;
             border-radius: 50%;
             border: 2px solid #fff;
-            z-index: 400;
+            z-index: 2;
           }
           .date {
             color: rgb(29, 29, 29);

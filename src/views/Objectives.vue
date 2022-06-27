@@ -14,9 +14,6 @@ export default {
 <style lang="scss" scoped>
 
 .container-objectives {
-
-
-
   .title {
     position: relative;
     z-index: 10;

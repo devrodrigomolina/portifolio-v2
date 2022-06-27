@@ -143,7 +143,7 @@ export default {
 
 @media screen and (max-width: 575.98px) {
 .container-studies {  
-        margin-bottom: 150px;
+  margin-bottom: 150px;
   .infos {
     width: 100vw;
     h1 { 
@@ -171,7 +171,6 @@ export default {
   }
   .image {
     img {
-
       opacity: 0.3;
       width: 300px;
       position: absolute;

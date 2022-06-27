@@ -34,6 +34,7 @@ export default {
   border-radius: 20px;
   position: absolute;
   z-index: 3;
+  overflow: hidden;
   button {
     color: white;
     background-image: linear-gradient(0.25deg, rgba(255, 248, 34, 0.363), rgba(255, 0, 128, 0.336), rgba(56, 2, 155, 0.774));
@@ -58,15 +59,16 @@ export default {
 }
 @media screen and (max-width: 768px) { 
   .modal {
-    width: 600px;
+    width: 400px;
     height: 400px;
   }
 }
 
 @media screen and (max-width: 575.98px) { 
   .modal {
-    width: 380px;
-    height: 500px;
+    width: 350px;
+    padding-left: 300px;
+    height: 600px;
   }
 }
 

@@ -28,6 +28,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 1000px;
   height: 800px;
   background: rgba(27, 26, 26, 0.884);
@@ -66,8 +67,8 @@ export default {
 
 @media screen and (max-width: 575.98px) { 
   .modal {
-    width: 350px;
-    padding-left: 300px;
+    width: 100%;
+
     height: 600px;
   }
 }

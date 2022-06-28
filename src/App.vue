@@ -3,6 +3,7 @@
     <NavBar />
       <transition mode="out-in"> 
         <router-view :class="themeCurrent">
+          <Warning/>
           <vue-particles v-if="themeCurrent" class="particles"
             :particlesNumber="26"
             shapeType="star"
@@ -25,11 +26,13 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import Clouds from '@/components/CloudBackground.vue'
+import Warning from '@/components/Warning.vue'
 
 export default {
   components: {
     NavBar,
-    Clouds
+    Clouds,
+    Warning
   },
   computed: {
     themeCurrent() {

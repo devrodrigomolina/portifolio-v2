@@ -123,6 +123,7 @@ export default {
         }
       }
       .projetos {
+        overflow: hidden;
         .video {
           width: 100%;
           transform: translateX(0);
@@ -237,14 +238,14 @@ export default {
   } 
 }
 }
-@media screen and (max-width: 768px) { 
-}
+
 @media screen and (max-width: 575.98px) { 
 .container-carrossel {
+  width: 100%;
   .container-projects { 
     .conteudo {
       .infos, h1 {
-        font-size: 0.8rem;
+        font-size: 1.8rem;
         p {
           width: 100%;
           text-align: center;
@@ -257,9 +258,6 @@ export default {
           width: 80vw;
           transform: translateX(0);
           object-fit: cover;
-          source {
-            width: 100%;
-          }
         }
       }
       .projetos {
@@ -277,9 +275,10 @@ export default {
     }
   }
   .arrow-right, .arrow-left {
-    width: 40px;
     display: flex;
-    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
     margin: 0px;
   } 
 }

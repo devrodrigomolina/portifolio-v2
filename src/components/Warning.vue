@@ -1,5 +1,5 @@
 <template>
-  <h1>PORTIFÓLIO EM DESENVOLVIMENTO</h1>
+  <h1>ATENÇÃO: PORTIFÓLIO EM DESENVOLVIMENTO</h1>
 </template>
 
 <script>

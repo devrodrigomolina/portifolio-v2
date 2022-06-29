@@ -12,7 +12,7 @@ export default {
 
 h1 {
   color: red;
-  z-index: 100000;
+  z-index: 888;
   position: absolute;
   top: 0;
 }
